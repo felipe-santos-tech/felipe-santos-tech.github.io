@@ -1,4 +1,116 @@
-<!-- Contato Section -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Felipe Santos, Analista de Sistemas e estudante de Engenharia de Software, especializado em desenvolvimento Android, SQL e automação empresarial no Brasil.">
+  <meta name="keywords" content="Felipe Santos, portfólio, desenvolvedor Android Brasil, SQL, Engenharia de Software, automação, Java, JavaScript">
+  <meta name="author" content="Felipe Santos">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Felipe Santos - Portfólio">
+  <meta property="og:description" content="Conheça os projetos de Felipe Santos, desenvolvedor Android e SQL, com soluções em automação e Engenharia de Software.">
+  <meta property="og:url" content="https://felipe-santos-tech.github.io">
+  <meta property="og:type" content="website">
+  <title>Felipe Santos - Portfólio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 font-inter">
+  <!-- Navbar -->
+  <nav class="bg-gray-900 text-white fixed w-full top-0 z-20 shadow-lg" aria-label="Navegação principal">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">Felipe Santos</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-cyan-400 transition hover:underline" aria-label="Ir para Home">Home</a></li>
+        <li><a href="#portfolio" class="hover:text-cyan-400 transition hover:underline" aria-label="Ir para Portfólio">Portfólio</a></li>
+        <li><a href="#sobre" class="hover:text-cyan-400 transition hover:underline" aria-label="Ir para Sobre Mim">Sobre</a></li>
+        <li><a href="#contato" class="hover:text-cyan-400 transition hover:underline" aria-label="Ir para Contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white text-center py-28">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Felipe Santos</h1>
+      <p class="text-lg md:text-2xl mb-4">Analista de Sistemas | Desenvolvedor Android & SQL</p>
+      <p class="text-md md:text-lg mb-8">Construindo soluções que transformam negócios e impulsionam o futuro.</p>
+      <div class="flex justify-center space-x-4">
+        <a href="https://linkedin.com/in/felipe-santos-tech" target="_blank" class="inline-block bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition text-lg shadow-lg">Ver Perfil no LinkedIn</a>
+        <a href="#portfolio" class="inline-block bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition text-lg shadow-lg">Ver Projetos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Portfólio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projeto 1: Laboratório de Engenharia de Software -->
+        <div class="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <i class="fas fa-graduation-cap text-cyan-500 mr-2"></i> Laboratório de Engenharia de Software: Projetos em Evolução
+          </h3>
+          <!-- Placeholder pra screenshot: <img src="img/engenharia-software.png" alt="Screenshot de Projetos de Engenharia de Software" class="w-full h-48 object-cover rounded-lg mb-4"> -->
+          <p class="text-gray-600 mb-4">Projetos acadêmicos da graduação em Engenharia de Software, incluindo CRUDS, automações e estudo de caso em grandes empresas, aplicando requisitos e gestão de projetos. <!-- Atualize aqui com novos projetos da faculdade --></p>
+          <p class="text-gray-600 mb-4"><strong>Tecnologias:</strong> Java, SQL, Python, LaTeX</p>
+          <p class="text-gray-600 mb-4"><strong>Impacto:</strong> Demonstrou aplicação prática em cenários reais.</p>
+          <a href="https://github.com/felipe-santos-tech/Engenharia-de-Software" target="_blank" class="inline-block bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition">Ver no GitHub</a>
+        </div>
+        <!-- Projeto 2: App Checklist -->
+        <div class="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <i class="fab fa-android text-cyan-500 mr-2"></i> Aplicativo de Checklist de Veículos
+          </h3>
+          <!-- Placeholder pra screenshot: <img src="img/checklist-app.png" alt="Screenshot do Aplicativo de Checklist de Veículos" class="w-full h-48 object-cover rounded-lg mb-4"> -->
+          <p class="text-gray-600 mb-4">App Android para gerenciar checklists de entrada e entrega de veículos, com login, fotos, assinaturas, medidor de combustível e integração com SQL Server e sistemas ERP de grandes empresas.</p>
+          <p class="text-gray-600 mb-4"><strong>Tecnologias:</strong> Java, Android Studio, SQL Server, Delphi, Fast Report</p>
+          <p class="text-gray-600 mb-4"><strong>Impacto:</strong> Aumentou produtividade com ganhos de 40% em tempo e agilidade, reduzindo erros manuais em 30% em processos de logística.</p>
+          <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="inline-block bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition">Ver no GitHub</a>
+        </div>
+        <!-- Experiência Técnica -->
+        <div class="bg-gradient-to-br from-cyan-50 to-purple-50 p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <i class="fas fa-tools text-cyan-500 mr-2"></i> Experiência Técnica
+          </h3>
+          <p class="text-gray-600 mb-4">Construí soluções práticas com foco em eficiência, incluindo:</p>
+          <ul class="text-gray-600 mb-4 list-disc list-inside">
+            <li><i class="fas fa-database text-cyan-500 mr-2"></i> Filtros SQL dinâmicos para tabelas de produtos e checklists.</li>
+            <li><i class="fab fa-android text-cyan-500 mr-2"></i> Desenvolvimento Android com ajustes em telas e integração com ERP.</li>
+            <li><i class="fas fa-table text-cyan-500 mr-2"></i> Processamento de planilhas XLSX com SQL.</li>
+            <li><i class="fas fa-code text-cyan-500 mr-2"></i> Automação de propostas comerciais em Delphi.</li>
+            <li><i class="fas fa-file-alt text-cyan-500 mr-2"></i> Estruturação de relatórios acadêmicos em LaTeX.</li>
+          </ul>
+          <p class="text-gray-600 mb-4"><strong>Tecnologias:</strong> SQL, Java, Android Studio, JavaScript, SheetJS, Delphi, Fast Report, LaTeX</p>
+          <p class="text-gray-600 mb-4"><strong>Impacto:</strong> Melhorou eficiência de sistemas em até 40%.</p>
+        </div>
+        <!-- Projetos em Andamento -->
+        <div class="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
+          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <i class="fas fa-spinner text-cyan-500 mr-2"></i> Projetos em Andamento
+          </h3>
+          <!-- Placeholder pra screenshot: <img src="img/projetos-andamento.png" alt="Screenshot de Projetos em Andamento" class="w-full h-48 object-cover rounded-lg mb-4"> -->
+          <p class="text-gray-600 mb-4">Trabalhando em novas soluções, como filtros SQL avançados, automações de controles de produção, relatórios em Fast Report e melhorias em sistemas comerciais para grandes empresas. <!-- Atualize aqui com novos projetos --></p>
+          <p class="text-gray-600 mb-4"><strong>Tecnologias:</strong> SQL, Java, Android Studio, JavaScript, Delphi, Fast Report, LaTeX</p>
+          <p class="text-gray-600 mb-4"><strong>Status:</strong> Em desenvolvimento, código disponível em breve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Section -->
+  <section id="sobre" class="bg-gray-200 py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Sobre Mim</h2>
+      <p class="text-gray-600 text-lg text-center max-w-2xl mx-auto">Sou Felipe Santos, Analista de Sistemas com experiência em equipamentos para o setor de construção civil e estudante de Engenharia de Software. Desenvolvo soluções mobile e de banco de dados, focado em automação e eficiência. Meu objetivo é me tornar referência em tecnologia, criando sistemas que transformam negócios e impulsionam meu crescimento na área tech.</p>
+      <p class="text-gray-600 text-lg text-center mt-4"><strong>Skills:</strong> Java, Android Studio, SQL Server, JavaScript, HTML, CSS, Git, Python, Delphi, Fast Report, LaTeX</p>
+    </div>
+  </section>
+
+  <!-- Contato Section -->
   <section id="contato" class="py-20">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contato</h2>
@@ -26,3 +138,20 @@
   <button id="back-to-top" class="fixed bottom-6 right-6 bg-cyan-500 text-white p-3 rounded-full shadow-lg hover:bg-cyan-600 transition border-2 border-white hidden" aria-label="Voltar ao topo">
     <i class="fas fa-arrow-up"></i>
   </button>
+
+  <!-- JavaScript para botão Voltar ao Topo -->
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    });
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
