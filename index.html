@@ -3,232 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Felipe Santos, Analista de Sistemas e estudante de Engenharia de Software, especializado em desenvolvimento Android, SQL e automação empresarial no Brasil.">
-  <meta name="keywords" content="Felipe Santos, portfólio, desenvolvedor Android Brasil, SQL, Engenharia de Software, automação, Java, JavaScript">
+  <meta name="description" content="Felipe Santos - Analista de Sistemas e Desenvolvedor Android especializado em soluções mobile, SQL e automação empresarial.">
+  <meta name="keywords" content="Felipe Santos, desenvolvedor Android, analista de sistemas, automação, SQL Server, engenharia de software, Curitiba">
   <meta name="author" content="Felipe Santos">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Felipe Santos - Portfólio">
-  <meta property="og:description" content="Conheça os projetos de Felipe Santos, desenvolvedor Android e SQL, com soluções em automação e Engenharia de Software.">
+  <meta property="og:title" content="Felipe Santos - Desenvolvedor Android & Analista de Sistemas">
+  <meta property="og:description" content="Soluções mobile, automação e integração de sistemas com foco em eficiência e resultados reais.">
   <meta property="og:url" content="https://felipe-santos-tech.github.io">
   <meta property="og:type" content="website">
-  <title>Felipe Santos - Portfólio</title>
+  <title>Felipe Santos | Desenvolvedor Android & Analista de Sistemas</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-100 font-inter">
+<body class="bg-gray-50 font-inter antialiased">
   <!-- Navbar -->
-  <nav class="bg-gray-900 text-white fixed w-full top-0 z-20 shadow-lg" aria-label="Navegação principal">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+  <nav class="bg-gray-900 text-white fixed w-full top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">Felipe Santos</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#home" class="hover:text-cyan-400 transition hover:underline" aria-label="Ir para Home">Home</a></li>
-        <li><a href="#portfolio" class="hover:text-cyan-400 transition hover:underline" aria-label="Ir para Portfólio">Portfólio</a></li>
-        <li><a href="#sobre" class="hover:text-cyan-400 transition hover:underline" aria-label="Ir para Sobre Mim">Sobre</a></li>
-        <li><a href="#contato" class="hover:text-cyan-400 transition hover:underline" aria-label="Ir para Contato">Contato</a></li>
+      <ul class="flex space-x-8 text-sm font-medium">
+        <li><a href="#home" class="hover:text-cyan-400 transition">Home</a></li>
+        <li><a href="#sobre" class="hover:text-cyan-400 transition">Sobre</a></li>
+        <li><a href="#portfolio" class="hover:text-cyan-400 transition">Portfólio</a></li>
+        <li><a href="#contato" class="hover:text-cyan-400 transition">Contato</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white text-center py-28">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Felipe Santos</h1>
-      <p class="text-lg md:text-2xl mb-4">Analista de Sistemas | Desenvolvedor Android & SQL</p>
-      <p class="text-md md:text-lg mb-8">Construindo soluções que transformam negócios e impulsionam o futuro.</p>
-      <div class="flex justify-center space-x-4">
-        <a href="https://linkedin.com/in/felipe-santos-tech" target="_blank" class="inline-block bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition text-lg shadow-lg">Ver Perfil no LinkedIn</a>
-        <a href="#portfolio" class="inline-block bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition text-lg shadow-lg">Ver Projetos</a>
+  <!-- Hero -->
+  <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-gray-900 via-blue-950 to-purple-950 text-white text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-300">Felipe Santos</h1>
+      <p class="text-xl md:text-3xl mb-8 font-light">Analista de Sistemas | Desenvolvedor Android & SQL</p>
+      <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
+        Construindo soluções mobile e automações que reduzem erros, aumentam eficiência e transformam processos empresariais.
+      </p>
+      <div class="flex justify-center space-x-6">
+        <a href="#contato" class="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition shadow-xl">Solicite Orçamento</a>
+        <a href="#portfolio" class="inline-block bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition">Ver Projetos</a>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="py-20">
-    <div class="container mx-auto px-4">
+  <!-- Sobre -->
+  <section id="sobre" class="py-24 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Sobre Mim</h2>
+      <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+        <p>
+          Olá, sou Felipe Santos, tenho 23 anos e atuo como Analista de Sistemas. Sou estudante de Engenharia de Software e minha trajetória na tecnologia começou no final de 2024, quando fui desafiado a desenvolver um aplicativo interno para uma empresa: um checklist digital para manutenção preventiva, semelhante aos utilizados em concessionárias.
+        </p>
+        <p>
+          Aquele projeto mudou minha perspectiva. Percebi que programação, desenvolvimento de software e o aprendizado contínuo — cada dia trazendo um novo desafio, uma nova ferramenta ou problema para resolver — eram exatamente o caminho que eu queria seguir. Gosto da sensação de evolução constante e do compromisso de sempre me aprimorar para entregar soluções melhores.
+        </p>
+        <p>
+          Hoje meu foco é criar inovação real para empresas por meio de soluções mobile, automação de processos e integração de sistemas. Resolver problemas complexos, entregar eficiência prática e gerar impacto mensurável no dia a dia das operações é o que me motiva. Meu objetivo é me consolidar como engenheiro de software de referência, com a satisfação genuína de olhar para trás e pensar: "missão cumprida".
+        </p>
+        <p class="font-semibold text-gray-800 mt-8">
+          <strong>Principais tecnologias:</strong> Java (Android Studio), SQL Server, JavaScript, Delphi, Python, Git, Fast Report, LaTeX
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfólio -->
+  <section id="portfolio" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Portfólio</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- App Checklist -->
-        <div class="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
-          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-            <i class="fab fa-android text-cyan-500 mr-2"></i> Aplicativo de Checklist de Veículos
-          </h3>
-          <p class="text-gray-600 mb-4">App Android para gerenciar checklists de entrada e entrega de veículos, com login, fotos, assinaturas, medidor de combustível e integração com SQL Server e sistemas ERP de grandes empresas.</p>
-          <p class="text-gray-600 mb-4"><strong>Tecnologias:</strong> Java, Android Studio, SQL Server, Delphi, Fast Report</p>
-          <p class="text-gray-600 mb-4"><strong>Impacto:</strong> Aumentou produtividade com ganhos de 40% em tempo e agilidade, reduzindo erros manuais em 30% em processos de logística.</p>
-          <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="inline-block bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition">Ver no GitHub</a>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Checklist -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+              <i class="fab fa-android text-cyan-500 mr-3 text-3xl"></i> Checklist Digital de Veículos
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Aplicativo Android para gerenciamento de checklists de entrada/saída de veículos, com login, captura de fotos, assinaturas digitais, medição de combustível e integração em tempo real com SQL Server e ERP corporativo.
+            </p>
+            <p class="text-gray-700 font-medium mb-2"><strong>Tecnologias:</strong> Java, Android Studio, SQL Server, Delphi, Fast Report</p>
+            <p class="text-green-600 font-semibold">Impacto: +40% produtividade | -30% erros manuais</p>
+            <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="mt-6 inline-block text-cyan-600 hover:text-cyan-800 font-medium">Ver no GitHub →</a>
+          </div>
         </div>
 
-        <!-- App SESMT - Entrega de EPI -->
-        <div class="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
-          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-            <i class="fab fa-android text-cyan-500 mr-2"></i> Aplicativo SESMT - Entrega de EPI e Assinaturas
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Desenvolvi um aplicativo Android para otimizar a entrega e controle de Equipamentos de Proteção Individual (EPI) e Coletivo (EPC), em conformidade com a NR-6. O app digitaliza o processo de entrega, coleta assinatura eletrônica e garante rastreabilidade para o SESMT/CIPA, eliminando papelada e reduzindo riscos legais/trabalhistas.
-          </p>
-          <p class="text-gray-600 mb-4">
-            <strong>Tecnologias:</strong> Android (Java), Android Studio, SQL Server, Canvas/Signature Pad, SQLite/Room, Fast Report
-          </p>
-          <p class="text-gray-600 mb-4">
-            <strong>Impacto:</strong> Aumento de ~40% na agilidade, redução de ~30% em erros, maior conformidade NR-6.
-          </p>
-          <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="inline-block bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition">
-            Ver no GitHub
-          </a>
+        <!-- SESMT EPI -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+              <i class="fab fa-android text-cyan-500 mr-3 text-3xl"></i> Controle de EPI e Assinaturas (SESMT)
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Solução Android para entrega e controle de EPIs/EPCs conforme NR-6, com assinatura digital, rastreabilidade completa e conformidade para SESMT/CIPA. Elimina papelada e reduz riscos legais/trabalhistas.
+            </p>
+            <p class="text-gray-700 font-medium mb-2"><strong>Tecnologias:</strong> Java (Android), SQL Server, Canvas/Signature Pad, SQLite/Room, Fast Report</p>
+            <p class="text-green-600 font-semibold">Impacto: +40% agilidade | -30% erros | Maior conformidade NR-6</p>
+            <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="mt-6 inline-block text-cyan-600 hover:text-cyan-800 font-medium">Ver no GitHub →</a>
+          </div>
         </div>
 
         <!-- Experiência Técnica -->
-        <div class="bg-gradient-to-br from-cyan-50 to-purple-50 p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
-          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-            <i class="fas fa-tools text-cyan-500 mr-2"></i> Experiência Técnica
-          </h3>
-          <p class="text-gray-600 mb-4">Construí soluções práticas com foco em eficiência, incluindo:</p>
-          <ul class="text-gray-600 mb-4 list-disc list-inside">
-            <li>Filtros SQL dinâmicos para tabelas de produtos e checklists.</li>
-            <li>Desenvolvimento Android com ajustes em telas e integração com ERP.</li>
-            <li>Processamento de planilhas XLSX com SQL.</li>
-            <li>Automação de propostas comerciais em Delphi.</li>
-            <li>Estruturação de relatórios acadêmicos em LaTeX.</li>
-          </ul>
-          <p class="text-gray-600 mb-4"><strong>Tecnologias:</strong> SQL, Java, Android Studio, JavaScript, SheetJS, Delphi, Fast Report, LaTeX</p>
-          <p class="text-gray-600 mb-4"><strong>Impacto:</strong> Melhorou eficiência de sistemas em até 40%.</p>
+        <div class="bg-gradient-to-br from-cyan-50 to-purple-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+              <i class="fas fa-tools text-cyan-500 mr-3 text-3xl"></i> Experiência Técnica
+            </h3>
+            <p class="text-gray-600 mb-4">Desenvolvimento de soluções práticas com foco em eficiência e escalabilidade:</p>
+            <ul class="text-gray-600 mb-6 space-y-2 list-disc pl-6">
+              <li>Filtros SQL dinâmicos e consultas otimizadas</li>
+              <li>Integração Android com ERP e bancos corporativos</li>
+              <li>Processamento de planilhas XLSX e automação em Delphi</li>
+              <li>Relatórios avançados (Fast Report) e estruturação LaTeX</li>
+            </ul>
+            <p class="text-gray-700 font-medium"><strong>Tecnologias:</strong> SQL, Java, Android Studio, JavaScript, SheetJS, Delphi, Fast Report, LaTeX</p>
+            <p class="text-green-600 font-semibold mt-4">Impacto geral: até 40% de ganho de eficiência em processos</p>
+          </div>
         </div>
 
-        <!-- Modernização ERP Industrial -->
-        <div class="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
-          <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-            <i class="fas fa-spinner text-cyan-500 mr-2"></i> Modernização e Implantação de ERP Industrial
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Participação em projeto interno iniciado em janeiro de 2026, com foco na modernização e implantação de ERP industrial para reestruturação e otimização de processos.
-          </p>
-          <p class="text-gray-600 mb-4">
-            <strong>Atividades:</strong> análise AS-IS/TO-BE, governança, cadastros base, automação de fluxos, consultas SQL estratégicas, integração de sistemas e suporte a relatórios (FastReport).
-          </p>
-          <p class="text-gray-600 mb-4">
-            <strong>Tecnologias:</strong> SQL Server, Java, Android Studio, Delphi, FastReport
-          </p>
-          <p class="text-gray-600 mb-4"><strong>Status:</strong> Em andamento.</p>
+        <!-- ERP Industrial -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 col-span-full md:col-span-1 lg:col-span-1">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+              <i class="fas fa-spinner text-cyan-500 mr-3 text-3xl animate-spin-slow"></i> Modernização de ERP Industrial
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Projeto em andamento (iniciado jan/2026) para modernização e implantação de ERP industrial, com reestruturação de processos, governança de dados e automação de fluxos operacionais.
+            </p>
+            <p class="text-gray-700 font-medium mb-2"><strong>Atividades:</strong> Análise AS-IS/TO-BE, cadastros base, consultas SQL estratégicas, integração de sistemas</p>
+            <p class="text-gray-700 font-medium"><strong>Tecnologias:</strong> SQL Server, Java, Android Studio, Delphi, FastReport</p>
+            <p class="text-blue-600 font-semibold mt-4">Em andamento – foco em otimização e escalabilidade</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sobre Section -->
-  <section id="sobre" class="bg-gray-200 py-20">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Sobre Mim</h2>
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="text-gray-600 text-lg mb-6">
-        Oi, sou o Felipe Santos, tenho 23 anos e atuo como Analista de Sistemas. Sou estudante de Engenharia de Software e minha história na tecnologia começou no final de 2024, quando fui desafiado a criar um aplicativo interno para uma empresa: um checklist digital para manutenção preventiva, parecido com o que concessionárias usam.
-      </p>
-      <p class="text-gray-600 text-lg mb-6">
-        Quando comecei, não imaginava que aquele projeto ia mudar tudo pra mim. Percebi na prática que programação, desenvolvimento de software e aprendizado constante (cada dia um novo desafio, uma nova ferramenta ou problema pra resolver) eram exatamente o que eu queria pra minha carreira. Adoro essa sensação de evolução diária e o fato de que, pra ser melhor, sempre preciso estudar mais.
-      </p>
-      <p class="text-gray-600 text-lg mb-6">
-        Hoje meu foco é trazer inovação e melhorias reais para empresas através de soluções mobile, automação e integração de sistemas. Resolver problemas complexos, entregar valor prático e ver o impacto no dia a dia das pessoas é o que me move. Meu objetivo maior é me tornar um engenheiro de software de referência, com a satisfação de olhar pra trás e pensar: "missão cumprida".
-      </p>
-      <p class="text-gray-600 text-lg font-semibold mt-8">
-        <strong>Skills que uso no dia a dia:</strong> Java (Android Studio), SQL Server, JavaScript, Delphi, Python, Git, Fast Report, LaTeX.
-      </p>
-    </div>
-  </div>
-</section>
+  <!-- Contato -->
+  <section id="contato" class="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Entre em Contato</h2>
+      <p class="text-center text-gray-600 text-lg mb-12">Precisa de soluções mobile, automação ou integração de sistemas? Vamos conversar sobre seu projeto.</p>
 
-  <!-- Contato Section -->
-  <section id="contato" class="py-20">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contato / Solicite Orçamento</h2>
-      <p class="text-gray-600 text-lg text-center mb-8">Quer discutir projetos, automação, app Android, integração SQL ou solicitar orçamento/currículo? Preencha abaixo!</p>
-      <div class="flex justify-center space-x-6 mb-8">
-        <a href="https://github.com/felipe-santos-tech" target="_blank" class="text-cyan-500 hover:text-cyan-600 transition" title="Visite meu GitHub"><i class="fab fa-github fa-2x"></i></a>
-        <a href="https://linkedin.com/in/felipe-santos-tech" target="_blank" class="text-cyan-500 hover:text-cyan-600 transition" title="Visite meu LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+      <div class="flex justify-center space-x-10 mb-12 text-3xl">
+        <a href="https://github.com/felipe-santos-tech" target="_blank" class="text-gray-700 hover:text-cyan-600 transition"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/felipe-santos-tech" target="_blank" class="text-gray-700 hover:text-cyan-600 transition"><i class="fab fa-linkedin"></i></a>
       </div>
 
-      <form id="contato-form" class="max-w-md mx-auto" aria-label="Formulário de solicitação de orçamento / contato">
-        <!-- Honeypot anti-spam -->
-        <input type="checkbox" name="botcheck" style="display:none;" />
-
-        <div class="mb-4">
-          <label for="name" class="block text-gray-700 font-bold mb-2">Nome</label>
-          <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Seu nome" required>
+      <form id="contato-form" class="space-y-6">
+        <input type="checkbox" name="botcheck" class="hidden" />
+        <div>
+          <label for="name" class="block text-gray-700 font-medium mb-2">Nome</label>
+          <input type="text" id="name" name="name" required class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition">
         </div>
-
-        <div class="mb-4">
-          <label for="email" class="block text-gray-700 font-bold mb-2">E-mail</label>
-          <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="seu@email.com" required>
+        <div>
+          <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+          <input type="email" id="email" name="email" required class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition">
         </div>
-
-        <div class="mb-4">
-          <label for="servico" class="block text-gray-700 font-bold mb-2">Tipo de Serviço</label>
-          <select id="servico" name="servico" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
-            <option value="">Selecione...</option>
-            <option value="Desenvolvimento Android">App Android</option>
-            <option value="Integração SQL / Banco de Dados">SQL / Banco de Dados</option>
-            <option value="Automação Empresarial">Automação / Processos</option>
-            <option value="Outro">Outro (descreva na mensagem)</option>
+        <div>
+          <label for="servico" class="block text-gray-700 font-medium mb-2">Tipo de Serviço</label>
+          <select id="servico" name="servico" required class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition">
+            <option value="">Selecione</option>
+            <option value="Desenvolvimento Android">Desenvolvimento Android</option>
+            <option value="SQL / Banco de Dados">SQL / Banco de Dados</option>
+            <option value="Automação">Automação de Processos</option>
+            <option value="Outro">Outro</option>
           </select>
         </div>
-
-        <div class="mb-4">
-          <label for="prazo" class="block text-gray-700 font-bold mb-2">Prazo Aproximado</label>
-          <input type="text" id="prazo" name="prazo" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Ex: 30 dias / urgente">
+        <div>
+          <label for="prazo" class="block text-gray-700 font-medium mb-2">Prazo Desejado</label>
+          <input type="text" id="prazo" name="prazo" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition" placeholder="Ex: 30 dias">
         </div>
-
-        <div class="mb-4">
-          <label for="message" class="block text-gray-700 font-bold mb-2">Mensagem / Descrição do Projeto</label>
-          <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Detalhes do projeto, orçamento estimado, etc." required></textarea>
+        <div>
+          <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem / Projeto</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition"></textarea>
         </div>
-
-        <button type="submit" class="bg-cyan-700 text-black px-6 py-3 rounded-lg hover:bg-cyan-800 transition w-full font-bold shadow-md">Enviar Solicitação</button>
+        <button type="submit" class="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition shadow-lg">Enviar Solicitação</button>
       </form>
-
-      <p class="text-center text-gray-500 mt-4 text-sm">Ao enviar, o e-mail chega pra mim e você decide se quer abrir o WhatsApp!</p>
+      <p class="text-center text-gray-500 mt-6 text-sm">O e-mail chega imediatamente + opção de abrir WhatsApp com tudo pronto</p>
     </div>
   </section>
 
-  <!-- Botão Flutuante WhatsApp -->
-  <a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20projeto..."
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 text-center">
+    <div class="container mx-auto px-6">
+      <p class="text-sm">&copy; 2026 Felipe Santos. Todos os direitos reservados.</p>
+      <p class="text-sm mt-2">Desenvolvedor Android | Analista de Sistemas | Curitiba/PR</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20projeto..." 
      target="_blank" rel="noopener noreferrer"
-     class="fixed bottom-20 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#128C7E] transition transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
-     aria-label="Fale comigo no WhatsApp">
+     class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-5 rounded-full shadow-2xl hover:bg-[#20b358] transition transform hover:scale-110" 
+     aria-label="Fale comigo no WhatsApp" title="Fale comigo no WhatsApp">
     <i class="fab fa-whatsapp fa-2x"></i>
   </a>
 
-  <!-- Botão Voltar ao Topo -->
-  <button id="back-to-top" class="fixed bottom-6 right-6 bg-cyan-700 text-black p-3 rounded-full shadow-lg hover:bg-cyan-800 transition border-2 border-white hidden" aria-label="Voltar ao topo">
+  <!-- Back to Top -->
+  <button id="back-to-top" class="fixed bottom-24 right-8 bg-cyan-600 text-white p-4 rounded-full shadow-lg hover:bg-cyan-700 transition hidden z-40">
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- SweetAlert2 CDN (caixa de diálogo bonita) -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <!-- JavaScript para botão Voltar ao Topo -->
   <script>
-    const backToTopButton = document.getElementById('back-to-top');
+    // Back to Top
+    const backToTop = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.remove('hidden');
-      } else {
-        backToTopButton.classList.add('hidden');
-      }
+      backToTop.classList.toggle('hidden', window.scrollY <= 300);
     });
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  <!-- Script para o formulário -->
-  <script>
+    // Form
     const form = document.getElementById('contato-form');
     const accessKey = '9fc1f0ed-f1ec-47ac-97fe-a08c6ad082c9';
     const whatsappNumber = '5541984084116';
 
-    form.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-
       const formData = new FormData(form);
       const name = formData.get('name') || 'Não informado';
       const email = formData.get('email') || 'Não informado';
@@ -243,56 +235,31 @@
       formData.append('subject', `Novo Orçamento/Contato - ${name} (${servico})`);
 
       try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData
-        });
-
-        const json = await response.json();
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+        const json = await res.json();
 
         if (json.success) {
-          // Caixa bonita com botões personalizados
           const result = await Swal.fire({
-            title: 'E-mail enviado com sucesso!',
-            text: 'Deseja abrir o WhatsApp agora com os detalhes prontos para conversarmos?',
+            title: 'Enviado com sucesso!',
+            text: 'Deseja abrir o WhatsApp com os detalhes prontos?',
             icon: 'success',
             showCancelButton: true,
-            confirmButtonColor: '#25D366', // Verde WhatsApp
-            cancelButtonColor: '#6c757d', // Cinza neutro
-            confirmButtonText: 'Sim, quero abrir o WhatsApp',
-            cancelButtonText: 'Não, vou abrir depois'
+            confirmButtonColor: '#25D366',
+            cancelButtonColor: '#6c757d',
+            confirmButtonText: 'Sim, abrir WhatsApp',
+            cancelButtonText: 'Não, obrigado'
           });
 
-          if (result.isConfirmed) {
-            window.open(waUrl, '_blank');
-          }
+          if (result.isConfirmed) window.open(waUrl, '_blank');
 
-          Swal.fire({
-            title: 'Tudo certo!',
-            text: result.isConfirmed 
-              ? 'WhatsApp foi aberto! Em breve respondo 😊' 
-              : 'Se quiser falar agora, clique no botão verde flutuante!',
-            icon: 'success',
-            confirmButtonText: 'OK'
-          });
-
+          Swal.fire('Pronto!', result.isConfirmed ? 'WhatsApp aberto!' : 'Qualquer coisa é só chamar no botão flutuante.', 'success');
           form.reset();
         } else {
-          Swal.fire({
-            title: 'Ops...',
-            text: 'O e-mail não foi enviado. Tente novamente ou use o botão flutuante do WhatsApp.',
-            icon: 'error',
-            confirmButtonText: 'OK'
-          });
+          Swal.fire('Ops...', 'Erro ao enviar. Tente novamente.', 'error');
         }
-      } catch (error) {
-        Swal.fire({
-          title: 'Erro',
-          text: 'Não consegui enviar o e-mail. Tente novamente ou use o botão flutuante.',
-          icon: 'error',
-          confirmButtonText: 'OK'
-        });
-        console.error(error);
+      } catch (err) {
+        Swal.fire('Erro', 'Falha na conexão. Use o WhatsApp flutuante.', 'error');
+        console.error(err);
       }
     });
   </script>
