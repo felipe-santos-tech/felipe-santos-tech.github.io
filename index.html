@@ -11,7 +11,7 @@
   <meta property="og:description" content="Soluções mobile, automação e integração de sistemas com foco em eficiência e resultados reais.">
   <meta property="og:url" content="https://felipe-santos-tech.github.io">
   <meta property="og:type" content="website">
-  <!--<title>Felipe Santos | Desenvolvedor Android & Analista de Sistemas</title> -->
+  --<title>Felipe Santos | Desenvolvedor Android & Analista de Sistemas</title> 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -191,18 +191,45 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Float - Forçando cor branca fixa e isolando do background -->
-<a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20projeto..."
-   target="_blank" rel="noopener noreferrer"
-   class="fixed bottom-8 right-8 z-[9999] bg-[#25D366] text-white !text-white p-5 rounded-full shadow-2xl hover:bg-[#1da851] transition-all duration-300 transform hover:scale-110 ring-4 ring-white/60 isolate"
-   aria-label="Fale comigo no WhatsApp" title="Fale comigo no WhatsApp">
-  <i class="fab fa-whatsapp fa-2x drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] !text-white"></i>
-</a>
+   <!-- WhatsApp Float – AJUSTADO -->
+  <a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20projeto..."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Fale comigo no WhatsApp"
+     title="Fale comigo no WhatsApp"
+     class="fixed bottom-8 right-8 z-[9999]
+            bg-[#25D366]
+            text-white
+            p-5
+            rounded-full
+            shadow-2xl
+            transition-all duration-300
+            transform hover:scale-110
+            hover:bg-[#1da851]
+            focus:outline-none focus:ring-0
+            active:bg-[#1da851]
+            isolate">
 
-<!-- Back to Top - Mesma lógica: cor branca fixa -->
-<button id="back-to-top" class="fixed bottom-24 right-8 z-[9999] bg-gradient-to-r from-cyan-600 to-cyan-700 text-white !text-white p-4 rounded-full shadow-2xl hover:from-cyan-700 hover:to-cyan-800 transition-all duration-300 hidden ring-4 ring-white/60 isolate">
-  <i class="fas fa-arrow-up fa-lg drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] !text-white"></i>
-</button>
+    <i class="fab fa-whatsapp fa-2x text-white"></i>
+  </a>
+
+  <!-- Back to Top – AJUSTADO -->
+  <button id="back-to-top"
+    class="fixed bottom-24 right-8 z-[9999]
+           bg-gradient-to-r from-cyan-600 to-cyan-700
+           text-white
+           p-4
+           rounded-full
+           shadow-2xl
+           transition-all duration-300
+           hover:from-cyan-700 hover:to-cyan-800
+           focus:outline-none focus:ring-0
+           active:from-cyan-700 active:to-cyan-800
+           hidden
+           isolate">
+
+    <i class="fas fa-arrow-up fa-lg text-white"></i>
+  </button>
   
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
