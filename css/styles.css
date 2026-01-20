@@ -2,15 +2,3 @@ portfolio/
 ├── index.html
 ├── css/
 │   └── styles.css
-/* ================================
-   Animação Premium (Apple / SaaS)
-   ================================ */
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
