@@ -152,16 +152,36 @@
         <a href="https://linkedin.com/in/felipe-santos-tech" target="_blank" class="text-cyan-500 hover:text-cyan-600 transition" title="Visite meu LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
         <a href="mailto:felipe.santos@example.com" class="text-cyan-500 hover:text-cyan-600 transition" title="Envie um e-mail"><i class="fas fa-envelope fa-2x"></i></a>
       </div>
-      <form action="mailto:felipe.santos@example.com" method="post" enctype="text/plain" class="max-w-md mx-auto" aria-label="Formulário de contato">
+      <form action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto" aria-label="Formulário de solicitação de orçamento / contato">
+        <!-- Access key (sua, já cadastrada) -->
+        <input type="hidden" name="access_key" value="9fc1f0ed-f1ec-47ac-97fe-a08c6ad082c9">
+
+        <!-- Honeypot anti-spam (deixe escondido, bots preenchem e o form ignora) -->
+        <input type="checkbox" name="botcheck" id="botcheck" style="display: none;" />
+
+        <!-- Campos visíveis -->
         <div class="mb-4">
           <label for="name" class="block text-gray-700 font-bold mb-2">Nome</label>
           <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Seu nome" required>
         </div>
+
         <div class="mb-4">
-          <label for="message" class="block text-gray-700 font-bold mb-2">Mensagem</label>
-          <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Sua mensagem ou solicitação de currículo" required></textarea>
+          <label for="email" class="block text-gray-700 font-bold mb-2">E-mail</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="seu@email.com" required>
         </div>
-        <button type="submit" class="bg-cyan-700 text-black px-6 py-2 rounded-lg hover:bg-cyan-800 transition border-2 border-white">Enviar Mensagem</button>
+
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 font-bold mb-2">Mensagem / Descrição do Projeto</label>
+          <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Conte sobre o que precisa: tipo de app, prazo, orçamento estimado, etc." required></textarea>
+        </div>
+
+        <!-- Redirect pro WhatsApp com dados preenchidos (placeholders {nome_do_campo}) -->
+        <input type="hidden" name="redirect" value="https://wa.me/55SEUNUMEROAQUI?text=Olá Felipe!%0A%0ASolicitei contato/orçamento pelo portfólio:%0A%0ANome: {name}%0AE-mail: {email}%0AMensagem:%0A{message}%0A%0A---%0AEnviado via site">
+
+        <!-- Opcional: assunto do e-mail que chega pra você -->
+        <input type="hidden" name="subject" value="Novo Orçamento / Contato do Portfólio - {name}">
+
+        <button type="submit" class="bg-cyan-700 text-black px-6 py-3 rounded-lg hover:bg-cyan-800 transition border-2 border-white w-full font-bold">Enviar Solicitação</button>
       </form>
     </div>
   </section>
