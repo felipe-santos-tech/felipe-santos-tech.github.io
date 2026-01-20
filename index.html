@@ -49,7 +49,6 @@
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Portfólio</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
         <!-- App Checklist -->
         <div class="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 project">
           <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
@@ -70,13 +69,10 @@
             Desenvolvi um aplicativo Android para otimizar a entrega e controle de Equipamentos de Proteção Individual (EPI) e Coletivo (EPC), em conformidade com a NR-6. O app digitaliza o processo de entrega, coleta assinatura eletrônica e garante rastreabilidade para o SESMT/CIPA, eliminando papelada e reduzindo riscos legais/trabalhistas.
           </p>
           <p class="text-gray-600 mb-4">
-            <strong>Tecnologias:</strong> Android (Java), Android Studio, SQL Server (consultas otimizadas e integração via API ou JDBC), Canvas/Signature Pad (assinaturas digitais), SQLite/Room (suporte offline), Fast Report (relatórios PDF/exportáveis, se integrado)
+            <strong>Tecnologias:</strong> Android (Java), Android Studio, SQL Server, Canvas/Signature Pad, SQLite/Room, Fast Report
           </p>
           <p class="text-gray-600 mb-4">
-            <strong>Impacto:</strong>
-            - Aumento de ~40% na agilidade operacional.<br>
-            - Redução de ~30% em erros e inconsistências nos registros.<br>
-            - Maior conformidade com NR-6 e rastreabilidade para auditorias.
+            <strong>Impacto:</strong> Aumento de ~40% na agilidade, redução de ~30% em erros, maior conformidade NR-6.
           </p>
           <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="inline-block bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition">
             Ver no GitHub
@@ -116,7 +112,6 @@
           </p>
           <p class="text-gray-600 mb-4"><strong>Status:</strong> Em andamento.</p>
         </div>
-
       </div>
     </div>
   </section>
@@ -177,7 +172,7 @@
           <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="Detalhes do projeto, orçamento estimado, etc." required></textarea>
         </div>
 
-        <button type="submit" class="bg-cyan-700 text-white px-6 py-3 rounded-lg hover:bg-cyan-800 transition w-full font-bold shadow-md">Enviar Solicitação</button>
+        <button type="submit" class="bg-cyan-700 text-black px-6 py-3 rounded-lg hover:bg-cyan-800 transition w-full font-bold shadow-md">Enviar Solicitação</button>
       </form>
 
       <p class="text-center text-gray-500 mt-4 text-sm">Ao enviar, abre o WhatsApp com detalhes prontos + cópia chega no meu e-mail!</p>
@@ -185,8 +180,8 @@
   </section>
 
   <!-- Botão Flutuante WhatsApp -->
-  <a href="https://wa.me/55SEUNUMERO?text=Oi%20Felipe!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20projeto..." 
-     target="_blank" 
+  <a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20projeto..." 
+     target="_blank" rel="noopener noreferrer"
      class="fixed bottom-20 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#128C7E] transition transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
      aria-label="Fale comigo no WhatsApp">
     <i class="fab fa-whatsapp fa-2x"></i>
@@ -212,38 +207,31 @@
     });
   </script>
 
-  <!-- Script para o formulário: envia e-mail + abre WhatsApp -->
+  <!-- Script para o formulário -->
   <script>
     const form = document.getElementById('contato-form');
     const accessKey = '9fc1f0ed-f1ec-47ac-97fe-a08c6ad082c9';
-    const whatsappNumber = '55SEUNUMERO'; // ← MUDE AQUI pro seu número real
+    const whatsappNumber = '5541984084116'; // MUDE AQUI pro seu número real
 
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
-
       const formData = new FormData(form);
       const name = formData.get('name') || 'Não informado';
       const email = formData.get('email') || 'Não informado';
       const servico = formData.get('servico') || 'Não selecionado';
       const prazo = formData.get('prazo') || 'Não informado';
       const message = formData.get('message') || 'Não informado';
-
       const waText = `Olá Felipe!%0A%0ASolicitei orçamento/contato pelo portfólio:%0A%0A*Nome:* ${encodeURIComponent(name)}%0A*E-mail:* ${encodeURIComponent(email)}%0A*Tipo de Serviço:* ${encodeURIComponent(servico)}%0A*Prazo:* ${encodeURIComponent(prazo)}%0A%0A*Mensagem / Projeto:*%0A${encodeURIComponent(message)}%0A%0A---%0AEnviado via site`;
       const waUrl = `https://wa.me/${whatsappNumber}?text=${waText}`;
-
       window.open(waUrl, '_blank');
-
       formData.append('access_key', accessKey);
       formData.append('subject', `Novo Orçamento/Contato - ${name} (${servico})`);
-
       try {
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: formData
         });
-
         const json = await response.json();
-
         if (json.success) {
           alert('Sucesso! Dados enviados pro meu e-mail e WhatsApp aberto com tudo pronto. Em breve respondo! 🚀');
           form.reset();
