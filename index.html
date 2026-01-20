@@ -211,11 +211,12 @@
   <script>
   const form = document.getElementById('contato-form');
   const accessKey = '9fc1f0ed-f1ec-47ac-97fe-a08c6ad082c9';
-  const whatsappNumber = '5541984084116'; // MUDE AQUI pro seu número real (ex: 55419999999999)
+  const whatsappNumber = '5541984084116'; // seu número já correto
 
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
 
+    // Primeiro: coleta os dados (síncrono)
     const formData = new FormData(form);
     const name = formData.get('name') || 'Não informado';
     const email = formData.get('email') || 'Não informado';
@@ -223,11 +224,13 @@
     const prazo = formData.get('prazo') || 'Não informado';
     const message = formData.get('message') || 'Não informado';
 
-    // Monta a mensagem pro WhatsApp
     const waText = `Olá Felipe!%0A%0ASolicitei orçamento/contato pelo portfólio:%0A%0A*Nome:* ${encodeURIComponent(name)}%0A*E-mail:* ${encodeURIComponent(email)}%0A*Tipo de Serviço:* ${encodeURIComponent(servico)}%0A*Prazo:* ${encodeURIComponent(prazo)}%0A%0A*Mensagem / Projeto:*%0A${encodeURIComponent(message)}%0A%0A---%0AEnviado via site`;
     const waUrl = `https://wa.me/${whatsappNumber}?text=${waText}`;
 
-    // Envia pro Web3Forms (e-mail)
+    // Pergunta ANTES de qualquer async (mantém o user gesture)
+    const abrirWhats = confirm('Deseja abrir o WhatsApp agora com os detalhes prontos para falar comigo?\n\n(O e-mail já será enviado em seguida.)');
+
+    // Agora envia o e-mail (async)
     formData.append('access_key', accessKey);
     formData.append('subject', `Novo Orçamento/Contato - ${name} (${servico})`);
 
@@ -240,18 +243,16 @@
       const json = await response.json();
 
       if (json.success) {
-        // Depois do e-mail enviado, pergunta se quer abrir WhatsApp
-        const abrirWhats = confirm('E-mail enviado com sucesso! Deseja abrir o WhatsApp agora com os detalhes prontos para falar comigo?');
-
+        // Se o usuário escolheu sim → abre agora (ainda dentro do evento submit, user gesture preservado)
         if (abrirWhats) {
           window.open(waUrl, '_blank');
         }
 
-        alert('Sucesso! Dados enviados pro meu e-mail. ' + 
+        alert('Sucesso! Dados enviados pro meu e-mail.\n' +
               (abrirWhats ? 'WhatsApp aberto!' : 'Se quiser conversar agora, use o botão verde flutuante.'));
         form.reset();
       } else {
-        alert('Ops, o e-mail não foi enviado. Mas você pode usar o botão flutuante do WhatsApp.');
+        alert('Ops, o e-mail não foi enviado. Tente novamente ou use o botão flutuante do WhatsApp.');
       }
     } catch (error) {
       alert('Erro ao enviar o e-mail. Tente novamente ou use o botão flutuante do WhatsApp.');
