@@ -191,17 +191,17 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Float - ÍCONE BRANCO + sombra + z-index alto -->
+  <!-- WhatsApp Float - Forçando cor branca fixa e isolando do background -->
 <a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20projeto..."
    target="_blank" rel="noopener noreferrer"
-   class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-5 rounded-full shadow-2xl hover:bg-[#1da851] transition-all duration-300 transform hover:scale-110 ring-4 ring-white/50"
+   class="fixed bottom-8 right-8 z-[9999] bg-[#25D366] text-white !text-white p-5 rounded-full shadow-2xl hover:bg-[#1da851] transition-all duration-300 transform hover:scale-110 ring-4 ring-white/60 isolate"
    aria-label="Fale comigo no WhatsApp" title="Fale comigo no WhatsApp">
-  <i class="fab fa-whatsapp fa-2x drop-shadow-lg"></i>
+  <i class="fab fa-whatsapp fa-2x drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] !text-white"></i>
 </a>
 
-<!-- Back to Top - ÍCONE BRANCO + fundo mais visível + sombra -->
-<button id="back-to-top" class="fixed bottom-24 right-8 z-[100] bg-gradient-to-r from-cyan-600 to-cyan-700 text-white p-4 rounded-full shadow-2xl hover:from-cyan-700 hover:to-cyan-800 transition-all duration-300 hidden ring-4 ring-white/50">
-  <i class="fas fa-arrow-up fa-lg drop-shadow-md"></i>
+<!-- Back to Top - Mesma lógica: cor branca fixa -->
+<button id="back-to-top" class="fixed bottom-24 right-8 z-[9999] bg-gradient-to-r from-cyan-600 to-cyan-700 text-white !text-white p-4 rounded-full shadow-2xl hover:from-cyan-700 hover:to-cyan-800 transition-all duration-300 hidden ring-4 ring-white/60 isolate">
+  <i class="fas fa-arrow-up fa-lg drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] !text-white"></i>
 </button>
   
   <!-- Scripts -->
