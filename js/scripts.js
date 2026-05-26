@@ -1,110 +1,86 @@
-/* ═══════════════════════════════
-   Felipe Santos — scripts.js
-═══════════════════════════════ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Elementos
+  const nav = document.getElementById('nav');
+  const topbtn = document.getElementById('topbtn');
+  const form = document.getElementById('cform');
+  const fsub = document.getElementById('fsub');
 
-// ── CUSTOM CURSOR ──
-const cursor = document.getElementById('cursor');
-const trail  = document.getElementById('cursor-trail');
-let mx = 0, my = 0, tx = 0, ty = 0;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.transform = `translate(${mx - 5}px, ${my - 5}px)`;
-});
-
-// Smooth trail
-function animateTrail() {
-  tx += (mx - tx) * 0.12;
-  ty += (my - ty) * 0.12;
-  trail.style.transform = `translate(${tx - 14}px, ${ty - 14}px)`;
-  requestAnimationFrame(animateTrail);
-}
-animateTrail();
-
-document.querySelectorAll('a, button, .pillar, .sc-item, .proj-card, .proj-featured').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform += ' scale(2)';
-    cursor.style.opacity = '0.5';
-    trail.style.transform += ' scale(1.5)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.opacity = '1';
-  });
-});
-
-// ── NAV SCROLL ──
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.style.background = window.scrollY > 80
-    ? 'rgba(8,12,16,0.97)'
-    : 'rgba(8,12,16,0.85)';
-});
-
-// ── BACK TO TOP ──
-const topBtn = document.getElementById('top-btn');
-window.addEventListener('scroll', () => {
-  topBtn.classList.toggle('show', window.scrollY > 400);
-});
-topBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-// ── REVEAL ON SCROLL ──
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      revealObserver.unobserve(entry.target);
+  // Scroll: background do nav + visibilidade botão topo
+  window.addEventListener('scroll', () => {
+    if (nav) {
+      nav.style.background = window.scrollY > 60 ? 'rgba(7,9,13,.98)' : 'rgba(7,9,13,.9)';
+    }
+    if (topbtn) {
+      topbtn.classList.toggle('show', window.scrollY > 400);
     }
   });
-}, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  // Botão voltar ao topo
+  if (topbtn) {
+    topbtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
-// ── SMOOTH NAV LINKS ──
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
+  // Navegação suave para links internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        window.scrollTo({
+          top: targetElement.offsetTop - 70,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Efeito de revelar ao rolar (Intersection Observer)
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, idx) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('in');
+        }, idx * 90);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.rv').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // Formulário: redireciona para WhatsApp com os dados preenchidos
+  if (form) {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const offset = document.getElementById('nav').offsetHeight;
-      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
-    }
-  });
-});
-
-// ── FORM SUBMIT (mailto fallback) ──
-const form = document.getElementById('form');
-form?.addEventListener('submit', e => {
-  e.preventDefault();
-  const data = new FormData(form);
-  const name    = data.get('name');
-  const email   = data.get('email');
-  const servico = data.get('servico');
-  const msg     = data.get('message');
-
-  const body = `Nome: ${name}%0AE-mail: ${email}%0AServiço: ${servico}%0A%0AMensagem:%0A${msg}`;
-  const waMsg = encodeURIComponent(`Oi Felipe! Sou ${name} (${email}).%0AServiço: ${servico}%0A${msg}`);
-
-  // Abre WhatsApp com mensagem pré-preenchida
-  window.open(`https://wa.me/5541984084116?text=${waMsg}`, '_blank');
-  form.reset();
-
-  // Feedback visual
-  const btn = form.querySelector('.fsubmit');
-  const orig = btn.innerHTML;
-  btn.innerHTML = '<span>Mensagem enviada! ✓</span>';
-  btn.style.background = '#4caf50';
-  setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 3000);
-});
-
-// ── PILLAR HOVER expand desc ──
-document.querySelectorAll('.pillar').forEach(p => {
-  const desc = p.querySelector('.pillar-desc');
-  p.addEventListener('mouseenter', () => {
-    desc.style.maxHeight = '80px';
-    desc.style.opacity   = '1';
-  });
-  p.addEventListener('mouseleave', () => {
-    desc.style.maxHeight = '';
-    desc.style.opacity   = '';
-  });
+      const formData = new FormData(form);
+      const name = formData.get('name') || '';
+      const email = formData.get('email') || '';
+      const service = formData.get('servico') || '';
+      const message = formData.get('message') || '';
+      
+      const whatsappMsg = encodeURIComponent(
+        `Oi Felipe! Sou ${name} (${email}).\nServiço: ${service}\n\n${message}`
+      );
+      window.open(`https://wa.me/5541984084116?text=${whatsappMsg}`, '_blank');
+      
+      // Feedback visual
+      if (fsub) {
+        fsub.textContent = 'Enviado! ✓';
+        fsub.style.background = '#4ade80';
+      }
+      form.reset();
+      setTimeout(() => {
+        if (fsub) {
+          fsub.textContent = 'Enviar Mensagem ✈';
+          fsub.style.background = '';
+        }
+      }, 3000);
+    });
+  }
 });
