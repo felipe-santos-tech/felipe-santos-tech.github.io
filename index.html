@@ -1,496 +1,416 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Felipe Santos — Analista de Sistemas, Desenvolvedor Android, SQL Server, Automação. Curitiba/PR.">
-  <title>Felipe Santos · Android Dev</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felipe Santos · Android Dev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursor-trail"></div>
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">FS<span class="blink">_</span></div>
+  <ul class="nav-links">
+    <li><a href="#sobre">sobre</a></li>
+    <li><a href="#stack">stack</a></li>
+    <li><a href="#projetos">projetos</a></li>
+    <li><a href="#contato">contato</a></li>
+  </ul>
+  <div class="nav-avail"><div class="nav-dot"></div><span class="mono">disponível</span></div>
+</nav>
 
-  <!-- NOISE OVERLAY -->
-  <div class="noise"></div>
+<!-- ══════════ HERO ══════════ -->
+<section id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
 
-  <!-- NAV -->
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo">FS<span class="blink">_</span></a>
-      <ul class="nav-links">
-        <li><a href="#sobre" data-num="01">sobre</a></li>
-        <li><a href="#stack" data-num="02">stack</a></li>
-        <li><a href="#projetos" data-num="03">projetos</a></li>
-        <li><a href="#contato" data-num="04">contato</a></li>
-      </ul>
-      <div class="nav-status">
-        <span class="status-dot"></span>
-        <span class="mono">disponível</span>
+  <div class="hero-inner">
+    <!-- LEFT -->
+    <div>
+      <div class="hero-tag">
+        <span>[</span> analista de sistemas <span>·</span> curitiba / pr <span>]</span>
       </div>
-    </div>
-  </nav>
-
-  <!-- ═══════════════════ HERO ═══════════════════ -->
-  <section id="home">
-    <div class="hero-bg-text">ANDROID</div>
-
-    <div class="hero-content">
-      <div class="hero-top">
-        <div class="hero-tag mono">
-          <span class="tag-bracket">[</span>
-          analista de sistemas
-          <span class="tag-dot"></span>
-          curitiba · pr
-          <span class="tag-bracket">]</span>
-        </div>
-      </div>
-
       <h1 class="hero-name">
-        <span class="name-line line-1">FELIPE</span>
-        <span class="name-line line-2">SANTOS</span>
+        <span style="display:block">FELIPE</span>
+        <span class="line2" style="display:block">SANTOS</span>
       </h1>
-
-      <div class="hero-descriptor">
-        <span class="mono desc-item">Android Dev</span>
-        <span class="sep">/</span>
-        <span class="mono desc-item">SQL Server</span>
-        <span class="sep">/</span>
-        <span class="mono desc-item">Automação</span>
+      <div class="hero-sub">
+        <span>Android Dev</span>
+        <span class="sl">/</span>
+        <span>SQL Server</span>
+        <span class="sl">/</span>
+        <span>Automação</span>
       </div>
-
       <p class="hero-bio">
-        Construo apps Android nativos que integram ERP, automatizo
-        processos empresariais e otimizo bancos de dados SQL — soluções
-        que <em>funcionam de verdade</em> no chão de fábrica.
+        Construo apps Android nativos que integram ERP, automatizo processos
+        empresariais e otimizo SQL Server — soluções que
+        <em>funcionam de verdade</em> no dia a dia da empresa.
       </p>
-
-      <div class="hero-cta">
-        <a href="#projetos" class="btn-main">
-          <span>Ver Projetos</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#contato" class="btn-outline mono">contato</a>
+      <div class="hero-btns">
+        <a href="#projetos" class="btn-p">Ver Projetos →</a>
+        <a href="#contato" class="btn-g">contato</a>
       </div>
-
       <div class="hero-socials">
-        <a href="https://github.com/felipe-santos-tech" target="_blank" class="social-link mono">
-          <span class="social-icon">GH</span> github
+        <a href="https://github.com/felipe-santos-tech" target="_blank" class="soc">
+          <span class="soc-badge">GH</span>github
         </a>
-        <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="social-link mono">
-          <span class="social-icon">LI</span> linkedin
+        <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="soc">
+          <span class="soc-badge">LI</span>linkedin
         </a>
-        <a href="https://wa.me/5541984084116" target="_blank" class="social-link mono">
-          <span class="social-icon">WA</span> whatsapp
+        <a href="https://wa.me/5541984084116" target="_blank" class="soc">
+          <span class="soc-badge">WA</span>whatsapp
+        </a>
+        <a href="https://felipe-santos-tech.github.io" target="_blank" class="soc">
+          <span class="soc-badge">🌐</span>portfólio
         </a>
       </div>
     </div>
 
-    <!-- Floating card -->
-    <div class="hero-float-card">
-      <div class="fc-header">
-        <span class="mono fc-label">último deploy</span>
-        <span class="fc-badge mono">live</span>
-      </div>
-      <div class="fc-code">
-        <div class="fc-line"><span class="fc-dim">$</span> git push origin <span class="fc-hi">main</span></div>
-        <div class="fc-line"><span class="fc-ok">✓</span> ERP modernization · sprint 12</div>
-        <div class="fc-line fc-dim">branch: feature/sql-optimization</div>
-      </div>
-      <div class="fc-metrics">
-        <div class="fc-metric">
-          <span class="fc-num">40<span class="fc-pct">%</span></span>
-          <span class="fc-mlabel mono">produtividade</span>
-        </div>
-        <div class="fc-divider"></div>
-        <div class="fc-metric">
-          <span class="fc-num">2+</span>
-          <span class="fc-mlabel mono">apps entregues</span>
-        </div>
-        <div class="fc-divider"></div>
-        <div class="fc-metric">
-          <span class="fc-num">8+</span>
-          <span class="fc-mlabel mono">tecnologias</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-scroll mono">scroll ↓</div>
-  </section>
-
-  <!-- ═══════════════════ SOBRE ═══════════════════ -->
-  <section id="sobre">
-    <div class="container">
-      <div class="section-label">
-        <span class="mono label-num">01 //</span>
-        <span class="mono label-text">sobre</span>
-      </div>
-
-      <div class="sobre-grid">
-        <div class="sobre-left reveal">
-          <h2 class="section-heading">Quem<br><em>sou eu</em></h2>
-          <div class="sobre-bio">
-            <p>Tenho <strong>23 anos</strong> e sou <strong>Analista de Sistemas</strong>, estudante de <strong>Engenharia de Software</strong>. Tudo começou no final de 2024, quando fui desafiado a criar um app de checklist digital para manutenção preventiva — aquilo mudou tudo.</p>
-            <p>Hoje foco em criar inovação real para empresas: <strong>apps Android</strong> que conversam com ERP, <strong>automações Delphi</strong> que eliminam retrabalho e queries SQL que <strong>entregam dados precisos</strong> para decisões estratégicas.</p>
+    <!-- RIGHT -->
+    <div>
+      <div class="hcard">
+        <div class="hc-row">
+          <div class="hc-av">FS</div>
+          <div>
+            <div class="hc-name">Felipe Santos</div>
+            <div class="hc-loc mono">📍 Curitiba, PR</div>
           </div>
+          <span class="hc-badge mono">disponível</span>
         </div>
+        <div class="hc-div"></div>
+        <div class="hc-metrics">
+          <div class="hc-m"><span class="hc-mn">40%</span><span class="hc-ml">produtividade</span></div>
+          <div class="hc-msep"></div>
+          <div class="hc-m"><span class="hc-mn">2+</span><span class="hc-ml">apps entregues</span></div>
+          <div class="hc-msep"></div>
+          <div class="hc-m"><span class="hc-mn">8+</span><span class="hc-ml">tecnologias</span></div>
+        </div>
+        <div class="hc-div"></div>
+        <div class="hc-status">
+          <div class="hc-si"><span class="hc-dot"></span><span>Analista de Sistemas</span></div>
+          <div class="hc-si"><span class="hc-dot"></span><span>Aberto a freelance</span></div>
+          <div class="hc-si"><span class="hc-dot amber"></span><span>ERP em andamento</span></div>
+        </div>
+      </div>
+      <div class="hterm">
+        <div class="hterm-bar">
+          <span></span><span></span><span></span>
+          <span class="hterm-title">bash</span>
+        </div>
+        <div class="hterm-body mono">
+          <div><span class="tc">$</span> <span class="tk">git</span> push origin <span class="tv">main</span></div>
+          <div><span class="tok">✓</span> ERP modernization · sprint 12</div>
+          <div class="tc">branch: feature/sql-optimization</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="sobre-pillars reveal">
-          <div class="pillar">
-            <div class="pillar-num mono">01</div>
-            <div class="pillar-icon">📱</div>
+  <div class="hero-scroll mono">scroll ↓</div>
+</section>
+
+<!-- ══════════ SOBRE ══════════ -->
+<section id="sobre">
+  <div class="wrap">
+    <div class="sec-label mono rv">01 // sobre</div>
+    <div class="sobre-grid">
+      <div class="rv">
+        <h2 class="sec-title">Quem<br><em>sou eu</em></h2>
+        <div class="sobre-bio">
+          <p>Tenho <strong>23 anos</strong> e atuo como <strong>Analista de Sistemas</strong>, estudante de <strong>Engenharia de Software</strong>. Tudo começou em 2024, quando fui desafiado a criar um app de checklist digital para manutenção preventiva — aquilo mudou minha trajetória.</p>
+          <p>Hoje crio inovação real para empresas: <strong>apps Android</strong> que se comunicam com ERP, <strong>automações Delphi</strong> que eliminam retrabalho e <strong>queries SQL Server</strong> que entregam dados precisos para decisões estratégicas.</p>
+        </div>
+      </div>
+      <div class="pillars rv">
+        <div class="pillar">
+          <span class="pillar-num">01</span>
+          <span class="pillar-icon">📱</span>
+          <div class="pillar-text">
             <div class="pillar-title">Mobile Native</div>
             <div class="pillar-desc">Apps Android com Java — integração ERP, assinatura digital, relatórios em tempo real.</div>
           </div>
-          <div class="pillar">
-            <div class="pillar-num mono">02</div>
-            <div class="pillar-icon">🗄️</div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">02</span>
+          <span class="pillar-icon">🗄️</span>
+          <div class="pillar-text">
             <div class="pillar-title">SQL & Dados</div>
-            <div class="pillar-desc">SQL Server, queries dinâmicas, modelagem de banco e integração com sistemas legados.</div>
+            <div class="pillar-desc">SQL Server, T-SQL, queries dinâmicas, modelagem e integração com sistemas legados.</div>
           </div>
-          <div class="pillar">
-            <div class="pillar-num mono">03</div>
-            <div class="pillar-icon">⚡</div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">03</span>
+          <span class="pillar-icon">⚡</span>
+          <div class="pillar-text">
             <div class="pillar-title">Automação</div>
-            <div class="pillar-desc">Processos com Delphi — redução de erros manuais, geração de relatórios, exportação XLSX.</div>
+            <div class="pillar-desc">Processos com Delphi — redução de erros, geração de relatórios, exportação XLSX.</div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ═══════════════════ STACK ═══════════════════ -->
-  <section id="stack">
-    <div class="container">
-      <div class="section-label">
-        <span class="mono label-num">02 //</span>
-        <span class="mono label-text">stack</span>
+<!-- ══════════ STACK ══════════ -->
+<section id="stack">
+  <div class="wrap">
+    <div class="sec-label mono rv">02 // stack</div>
+    <h2 class="sec-title rv">Ferramentas<br><em>& Tecnologias</em></h2>
+    <div class="stack-grid">
+
+      <div class="scol rv">
+        <div class="scol-title">Mobile</div>
+        <div class="sitems">
+          <div class="sitem feat">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
+            <div><div class="si-name">Java</div><div class="si-sub mono">principal</div></div>
+          </div>
+          <div class="sitem feat">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" alt="Android">
+            <div><div class="si-name">Android</div><div class="si-sub mono">nativo</div></div>
+          </div>
+          <div class="sitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">
+            <div><div class="si-name">Android Studio</div><div class="si-sub mono">IDE</div></div>
+          </div>
+          <div class="sitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite">
+            <div><div class="si-name">SQLite / Room</div><div class="si-sub mono">offline storage</div></div>
+          </div>
+        </div>
       </div>
-      <h2 class="section-heading reveal">Ferramentas<br><em>& Tecnologias</em></h2>
 
-      <div class="stack-grid">
-
-        <div class="stack-col reveal">
-          <div class="sc-header mono">Mobile</div>
-          <div class="sc-items">
-            <div class="sc-item featured">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"/>
-              <div>
-                <div class="sci-name">Java</div>
-                <div class="sci-desc mono">principal</div>
-              </div>
-            </div>
-            <div class="sc-item featured">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" alt="Android"/>
-              <div>
-                <div class="sci-name">Android</div>
-                <div class="sci-desc mono">nativo</div>
-              </div>
-            </div>
-            <div class="sc-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"/>
-              <div>
-                <div class="sci-name">Android Studio</div>
-                <div class="sci-desc mono">IDE</div>
-              </div>
-            </div>
-            <div class="sc-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"/>
-              <div>
-                <div class="sci-name">SQLite / Room</div>
-                <div class="sci-desc mono">offline storage</div>
-              </div>
-            </div>
+      <div class="scol rv">
+        <div class="scol-title">Banco de Dados</div>
+        <div class="sitems">
+          <div class="sitem feat">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server">
+            <div><div class="si-name">SQL Server</div><div class="si-sub mono">SSMS · T-SQL</div></div>
+          </div>
+          <div class="sitem">
+            <span class="sitem-icon">🔗</span>
+            <div><div class="si-name">Integração ERP</div><div class="si-sub mono">queries dinâmicas</div></div>
           </div>
         </div>
+      </div>
 
-        <div class="stack-col reveal">
-          <div class="sc-header mono">Banco de Dados</div>
-          <div class="sc-items">
-            <div class="sc-item featured">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server"/>
-              <div>
-                <div class="sci-name">SQL Server</div>
-                <div class="sci-desc mono">SSMS · T-SQL</div>
-              </div>
-            </div>
-            <div class="sc-item">
-              <span class="sci-icon-fallback">🔗</span>
-              <div>
-                <div class="sci-name">Integração ERP</div>
-                <div class="sci-desc mono">queries dinâmicas</div>
-              </div>
-            </div>
+      <div class="scol rv">
+        <div class="scol-title">Automação</div>
+        <div class="sitems">
+          <div class="sitem feat">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/delphi/delphi-original.svg" alt="Delphi">
+            <div><div class="si-name">Delphi</div><div class="si-sub mono">automação · ERP</div></div>
+          </div>
+          <div class="sitem">
+            <span class="sitem-icon">📊</span>
+            <div><div class="si-name">Fast Report</div><div class="si-sub mono">relatórios</div></div>
+          </div>
+          <div class="sitem">
+            <span class="sitem-icon">📄</span>
+            <div><div class="si-name">SheetJS / XLSX</div><div class="si-sub mono">exportação</div></div>
           </div>
         </div>
+      </div>
 
-        <div class="stack-col reveal">
-          <div class="sc-header mono">Automação & Desktop</div>
-          <div class="sc-items">
-            <div class="sc-item featured">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/delphi/delphi-original.svg" alt="Delphi"/>
-              <div>
-                <div class="sci-name">Delphi</div>
-                <div class="sci-desc mono">automações · ERP</div>
-              </div>
-            </div>
-            <div class="sc-item">
-              <span class="sci-icon-fallback">📊</span>
-              <div>
-                <div class="sci-name">Fast Report</div>
-                <div class="sci-desc mono">relatórios</div>
-              </div>
-            </div>
+      <div class="scol rv">
+        <div class="scol-title">Ferramentas & Web</div>
+        <div class="sitems">
+          <div class="sitem feat">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+            <div><div class="si-name">Git / GitHub</div><div class="si-sub mono">versionamento</div></div>
+          </div>
+          <div class="sitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+            <div><div class="si-name">HTML5</div><div class="si-sub mono">markup</div></div>
+          </div>
+          <div class="sitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+            <div><div class="si-name">CSS3</div><div class="si-sub mono">estilo</div></div>
+          </div>
+          <div class="sitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <div><div class="si-name">JavaScript</div><div class="si-sub mono">scripts</div></div>
           </div>
         </div>
+      </div>
 
-        <div class="stack-col reveal">
-          <div class="sc-header mono">Ferramentas</div>
-          <div class="sc-items">
-            <div class="sc-item featured">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"/>
-              <div>
-                <div class="sci-name">Git / GitHub</div>
-                <div class="sci-desc mono">versionamento</div>
-              </div>
-            </div>
-            <div class="sc-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"/>
-              <div>
-                <div class="sci-name">HTML5</div>
-                <div class="sci-desc mono">markup</div>
-              </div>
-            </div>
-            <div class="sc-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"/>
-              <div>
-                <div class="sci-name">CSS3</div>
-                <div class="sci-desc mono">estilo</div>
-              </div>
-            </div>
-            <div class="sc-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-              <div>
-                <div class="sci-name">JavaScript</div>
-                <div class="sci-desc mono">scripts</div>
-              </div>
-            </div>
-          </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROJETOS ══════════ -->
+<section id="projetos">
+  <div class="wrap">
+    <div class="sec-label mono rv">03 // projetos</div>
+    <h2 class="sec-title rv">O que já<br><em>construí</em></h2>
+
+    <!-- Destaque -->
+    <div class="proj-hero rv">
+      <div>
+        <div class="ph-meta">
+          <span class="ph-num mono">001</span>
+          <span class="ph-badge mono">★ destaque</span>
         </div>
-
+        <h3 class="ph-title">Checklist Digital de Veículos</h3>
+        <p class="ph-desc">App Android para gestão de checklists de entrada/saída de veículos, com login, captura de fotos, assinaturas digitais, medição de combustível e integração em tempo real com SQL Server e ERP corporativo.</p>
+        <div class="ph-metrics">
+          <div class="ph-metric"><span class="ph-n">↑40%</span><span class="ph-l">produtividade</span></div>
+          <div class="ph-metric"><span class="ph-n">↓30%</span><span class="ph-l">erros manuais</span></div>
+        </div>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Android Studio</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Delphi</span>
+          <span class="tag">Fast Report</span>
+        </div>
+        <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="plink mono">→ github.com/felipe-santos-tech</a>
+      </div>
+      <div class="phone">
+        <div class="ph-bar"></div>
+        <div class="ph-row"><span class="pdot g"></span><span>Entrada — Truck #41</span></div>
+        <div class="ph-row"><span class="pdot g"></span><span>Combustível: 78%</span></div>
+        <div class="ph-row"><span class="pdot y"></span><span>Foto — capturada</span></div>
+        <div class="ph-row"><span class="pdot g"></span><span>Assinatura — OK</span></div>
+        <div class="ph-sync">SYNC ERP ↗</div>
       </div>
     </div>
-  </section>
 
-  <!-- ═══════════════════ PROJETOS ═══════════════════ -->
-  <section id="projetos">
-    <div class="container">
-      <div class="section-label">
-        <span class="mono label-num">03 //</span>
-        <span class="mono label-text">projetos</span>
+    <!-- Grid -->
+    <div class="proj-grid">
+      <div class="pcard rv">
+        <div class="pcard-top">
+          <span class="pcard-num mono">002</span>
+        </div>
+        <h3 class="pcard-title">Controle de EPI & SESMT</h3>
+        <p class="pcard-desc">App Android para entrega e controle de EPIs/EPCs conforme NR-6, com assinatura digital e rastreabilidade completa por colaborador.</p>
+        <div class="pcard-metrics">
+          <span class="pm">↑ 40% agilidade</span>
+          <span class="pm">✓ NR-6</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">SQLite</span>
+        </div>
+        <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="plink mono">→ Ver repositório</a>
       </div>
-      <h2 class="section-heading reveal">O que já<br><em>construí</em></h2>
 
-      <!-- Projeto Destaque -->
-      <div class="proj-featured reveal">
-        <div class="pf-left">
-          <div class="pf-meta">
-            <span class="mono pf-num">001</span>
-            <span class="pf-badge mono">★ destaque</span>
-          </div>
-          <h3 class="pf-title">Checklist Digital de Veículos</h3>
-          <p class="pf-desc">App Android para gestão de checklists de entrada/saída de veículos, com login, captura de fotos, assinaturas digitais, medição de combustível e integração em tempo real com SQL Server e ERP corporativo.</p>
-          <div class="pf-results">
-            <div class="pf-result">
-              <span class="pf-rn">↑ 40%</span>
-              <span class="mono pf-rl">produtividade</span>
-            </div>
-            <div class="pf-result">
-              <span class="pf-rn">↓ 30%</span>
-              <span class="mono pf-rl">erros manuais</span>
-            </div>
-          </div>
-          <div class="pf-tags">
-            <span class="ptag">Java</span>
-            <span class="ptag">Android Studio</span>
-            <span class="ptag">SQL Server</span>
-            <span class="ptag">Delphi</span>
-            <span class="ptag">Fast Report</span>
-          </div>
-          <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="pf-link mono">
-            → github.com/felipe-santos-tech
+      <div class="pcard wip rv">
+        <div class="pcard-top">
+          <span class="pcard-num mono">003</span>
+          <span class="pcard-wip mono">🔄 em andamento</span>
+        </div>
+        <h3 class="pcard-title">Modernização de ERP Industrial</h3>
+        <p class="pcard-desc">Modernização e implantação de ERP industrial com reestruturação de processos, análise AS-IS/TO-BE e governança de dados. Sprint 12.</p>
+        <div class="pcard-metrics">
+          <span class="pm dim">Jan/2026 — atual</span>
+        </div>
+        <div class="tags">
+          <span class="tag">SQL Server</span>
+          <span class="tag">Java</span>
+          <span class="tag">Delphi</span>
+        </div>
+      </div>
+
+      <div class="pcard rv">
+        <div class="pcard-top">
+          <span class="pcard-num mono">+ xp</span>
+        </div>
+        <h3 class="pcard-title">Experiência Técnica</h3>
+        <ul class="xp-list">
+          <li>Filtros SQL dinâmicos e queries otimizadas</li>
+          <li>Integração Android ↔ ERP via REST/JSON</li>
+          <li>Automação Delphi com exportação XLSX</li>
+          <li>Relatórios Fast Report e docs LaTeX</li>
+          <li>Canvas API para assinaturas digitais</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTATO ══════════ -->
+<section id="contato">
+  <div class="wrap">
+    <div class="sec-label mono rv">04 // contato</div>
+    <div class="contact-grid">
+      <div class="rv">
+        <h2 class="sec-title">Bora<br><em>conversar?</em></h2>
+        <p class="contact-desc">Precisa de app Android, automação de processo ou integração SQL? Me manda mensagem — respondo em menos de 24h. 🚀</p>
+        <div class="clinks">
+          <a href="https://wa.me/5541984084116" target="_blank" class="clink">
+            <div class="clink-ico">WA</div>
+            <div><div class="clink-lbl mono">WhatsApp</div><div class="clink-val">+55 41 98408-4116</div></div>
+            <span class="clink-arr">→</span>
+          </a>
+          <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="clink">
+            <div class="clink-ico">LI</div>
+            <div><div class="clink-lbl mono">LinkedIn</div><div class="clink-val">felipe-santos-tech</div></div>
+            <span class="clink-arr">→</span>
+          </a>
+          <a href="https://github.com/felipe-santos-tech" target="_blank" class="clink">
+            <div class="clink-ico">GH</div>
+            <div><div class="clink-lbl mono">GitHub</div><div class="clink-val">@felipe-santos-tech</div></div>
+            <span class="clink-arr">→</span>
           </a>
         </div>
-        <div class="pf-visual">
-          <div class="phone-mockup">
-            <div class="pm-screen">
-              <div class="pm-bar"></div>
-              <div class="pm-item"><span class="pm-dot green"></span><span class="mono">Entrada — Truck #41</span></div>
-              <div class="pm-item"><span class="pm-dot green"></span><span class="mono">Combustível: 78%</span></div>
-              <div class="pm-item"><span class="pm-dot yellow"></span><span class="mono">Foto — capturada</span></div>
-              <div class="pm-item"><span class="pm-dot green"></span><span class="mono">Assinatura — OK</span></div>
-              <div class="pm-btn mono">SYNC ERP ↗</div>
-            </div>
-          </div>
-        </div>
+        <p class="contact-note">// resposta em &lt; 24h ⚡</p>
       </div>
 
-      <!-- Grid de projetos -->
-      <div class="proj-grid">
-        <div class="proj-card reveal">
-          <div class="pc-header">
-            <span class="mono pc-num">002</span>
+      <div class="rv">
+        <form class="cform" id="cform">
+          <div class="fg">
+            <label class="flbl">nome</label>
+            <input type="text" name="name" required class="finp" placeholder="Seu nome completo">
           </div>
-          <h3 class="pc-title">Controle de EPI & SESMT</h3>
-          <p class="pc-desc">App Android para entrega e controle de EPIs/EPCs conforme NR-6, com assinatura digital e rastreabilidade completa por colaborador.</p>
-          <div class="pc-results">
-            <span class="pc-result">↑ 40% agilidade</span>
-            <span class="pc-result">✓ NR-6</span>
+          <div class="frow">
+            <div class="fg">
+              <label class="flbl">e-mail</label>
+              <input type="email" name="email" required class="finp" placeholder="seu@email.com">
+            </div>
+            <div class="fg">
+              <label class="flbl">serviço</label>
+              <select name="servico" required class="finp">
+                <option value="">Selecione...</option>
+                <option>Desenvolvimento Android</option>
+                <option>Automação de Processos</option>
+                <option>SQL / Banco de Dados</option>
+                <option>Criação de Sites</option>
+                <option>Outro</option>
+              </select>
+            </div>
           </div>
-          <div class="pc-tags">
-            <span class="ptag">Java</span>
-            <span class="ptag">SQL Server</span>
-            <span class="ptag">SQLite</span>
+          <div class="fg">
+            <label class="flbl">mensagem</label>
+            <textarea name="message" rows="5" required class="finp" placeholder="Descreva seu projeto..."></textarea>
           </div>
-          <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="pc-link mono">→ Ver repositório</a>
-        </div>
-
-        <div class="proj-card wip reveal">
-          <div class="pc-header">
-            <span class="mono pc-num">003</span>
-            <span class="pc-wip mono">🔄 em andamento</span>
-          </div>
-          <h3 class="pc-title">Modernização de ERP Industrial</h3>
-          <p class="pc-desc">Modernização e implantação de ERP industrial com reestruturação de processos, análise AS-IS/TO-BE e governança de dados. Sprint 12.</p>
-          <div class="pc-results">
-            <span class="pc-result muted">Jan/2026 — atual</span>
-          </div>
-          <div class="pc-tags">
-            <span class="ptag">SQL Server</span>
-            <span class="ptag">Java</span>
-            <span class="ptag">Delphi</span>
-          </div>
-        </div>
-
-        <div class="proj-card xp reveal">
-          <div class="pc-header">
-            <span class="mono pc-num">+ xp</span>
-          </div>
-          <h3 class="pc-title">Experiência Técnica</h3>
-          <ul class="xp-list">
-            <li>Filtros SQL dinâmicos e queries otimizadas</li>
-            <li>Integração Android ↔ ERP corporativo via REST/JSON</li>
-            <li>Processamento XLSX e automação Delphi</li>
-            <li>Relatórios Fast Report + docs LaTeX</li>
-            <li>Canvas API para assinaturas digitais</li>
-          </ul>
-        </div>
+          <button type="submit" class="fsub" id="fsub">Enviar Mensagem ✈</button>
+        </form>
       </div>
     </div>
-  </section>
-
-  <!-- ═══════════════════ CONTATO ═══════════════════ -->
-  <section id="contato">
-    <div class="container">
-      <div class="section-label">
-        <span class="mono label-num">04 //</span>
-        <span class="mono label-text">contato</span>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-left reveal">
-          <h2 class="section-heading">Bora<br><em>conversar?</em></h2>
-          <p class="contact-desc">Precisa de um app Android, automação de processo ou integração SQL? Me manda uma mensagem — respondo em menos de 24h. 🚀</p>
-
-          <div class="contact-links">
-            <a href="https://wa.me/5541984084116" target="_blank" class="clink">
-              <div class="clink-icon">WA</div>
-              <div>
-                <div class="clink-label mono">WhatsApp</div>
-                <div class="clink-val">+55 41 98408-4116</div>
-              </div>
-              <span class="clink-arrow">→</span>
-            </a>
-            <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="clink">
-              <div class="clink-icon">LI</div>
-              <div>
-                <div class="clink-label mono">LinkedIn</div>
-                <div class="clink-val">felipe-santos-tech</div>
-              </div>
-              <span class="clink-arrow">→</span>
-            </a>
-            <a href="https://github.com/felipe-santos-tech" target="_blank" class="clink">
-              <div class="clink-icon">GH</div>
-              <div>
-                <div class="clink-label mono">GitHub</div>
-                <div class="clink-val">@felipe-santos-tech</div>
-              </div>
-              <span class="clink-arrow">→</span>
-            </a>
-          </div>
-
-          <p class="mono contact-note">// resposta em &lt; 24h ⚡</p>
-        </div>
-
-        <div class="contact-right reveal">
-          <form id="form" class="contact-form">
-            <div class="form-group">
-              <label class="flabel mono">nome</label>
-              <input type="text" name="name" required class="finput" placeholder="Seu nome">
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="flabel mono">e-mail</label>
-                <input type="email" name="email" required class="finput" placeholder="seu@email.com">
-              </div>
-              <div class="form-group">
-                <label class="flabel mono">serviço</label>
-                <select name="servico" required class="finput">
-                  <option value="">Selecione...</option>
-                  <option>Desenvolvimento Android</option>
-                  <option>Automação de Processos</option>
-                  <option>SQL / Banco de Dados</option>
-                  <option>Criação de Sites</option>
-                  <option>Outro</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="flabel mono">mensagem</label>
-              <textarea name="message" rows="5" required class="finput" placeholder="Descreva seu projeto..."></textarea>
-            </div>
-            <button type="submit" class="fsubmit">
-              <span>Enviar Mensagem</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l12-6-4 6 4 6-12-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo mono">FS<span class="blink">_</span></div>
-      <div class="footer-mid mono">
-        Android Dev · SQL Server · Curitiba/PR
-      </div>
-      <div class="footer-copy mono">Feito com ☕ · GitHub Pages · © 2026</div>
-    </div>
-  </footer>
-
-  <!-- FAB -->
-  <div class="fabs">
-    <button id="top-btn" class="fab" title="Voltar ao topo">↑</button>
-    <a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20um%20projeto..."
-       target="_blank" class="fab fab-wa">WA</a>
   </div>
+</section>
 
-  <script src="js/scripts.js"></script>
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">FS<span class="blink">_</span></div>
+    <div class="foot-sub">Android Dev · SQL Server · Curitiba / PR</div>
+    <div class="foot-copy">Feito com ☕ · GitHub Pages · © 2026</div>
+  </div>
+</footer>
+
+<!-- FABs -->
+<div class="fabs">
+  <button id="topbtn" class="fab" title="Voltar ao topo">↑</button>
+  <a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar."
+     target="_blank" class="fab fab-wa">WA</a>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
