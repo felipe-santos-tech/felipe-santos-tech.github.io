@@ -1,156 +1,110 @@
-/* ============================================================
-   FELIPE SANTOS — scripts.js
-   Theme · Scroll FX · Back-to-top · Contact Form
-   ============================================================ */
+/* ═══════════════════════════════
+   Felipe Santos — scripts.js
+═══════════════════════════════ */
 
-(function () {
-  'use strict';
+// ── CUSTOM CURSOR ──
+const cursor = document.getElementById('cursor');
+const trail  = document.getElementById('cursor-trail');
+let mx = 0, my = 0, tx = 0, ty = 0;
 
-  /* --------------------------------------------------------
-     1. THEME TOGGLE
-  -------------------------------------------------------- */
-  const html = document.documentElement;
-  const themeBtn = document.getElementById('theme-toggle');
-  const STORAGE_KEY = 'felipe-theme';
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.transform = `translate(${mx - 5}px, ${my - 5}px)`;
+});
 
-  function applyTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    localStorage.setItem(STORAGE_KEY, theme);
-  }
+// Smooth trail
+function animateTrail() {
+  tx += (mx - tx) * 0.12;
+  ty += (my - ty) * 0.12;
+  trail.style.transform = `translate(${tx - 14}px, ${ty - 14}px)`;
+  requestAnimationFrame(animateTrail);
+}
+animateTrail();
 
-  const saved = localStorage.getItem(STORAGE_KEY) || 'light';
-  applyTheme(saved);
-
-  themeBtn && themeBtn.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    applyTheme(current === 'dark' ? 'light' : 'dark');
+document.querySelectorAll('a, button, .pillar, .sc-item, .proj-card, .proj-featured').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.transform += ' scale(2)';
+    cursor.style.opacity = '0.5';
+    trail.style.transform += ' scale(1.5)';
   });
-
-
-  /* --------------------------------------------------------
-     2. SCROLL ANIMATIONS (Intersection Observer)
-  -------------------------------------------------------- */
-  const fadeEls = document.querySelectorAll('.fade-in');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  fadeEls.forEach((el) => observer.observe(el));
-
-
-  /* --------------------------------------------------------
-     3. BACK TO TOP
-  -------------------------------------------------------- */
-  const backToTop = document.getElementById('back-to-top');
-
-  window.addEventListener('scroll', () => {
-    if (!backToTop) return;
-    backToTop.classList.toggle('visible', window.scrollY > 320);
-  }, { passive: true });
-
-  backToTop && backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  el.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '1';
   });
+});
 
+// ── NAV SCROLL ──
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.style.background = window.scrollY > 80
+    ? 'rgba(8,12,16,0.97)'
+    : 'rgba(8,12,16,0.85)';
+});
 
-  /* --------------------------------------------------------
-     4. NAVBAR SHADOW ON SCROLL
-  -------------------------------------------------------- */
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (!navbar) return;
-    navbar.style.boxShadow = window.scrollY > 20
-      ? '0 2px 24px rgba(26,22,18,0.12)'
-      : 'none';
-  }, { passive: true });
+// ── BACK TO TOP ──
+const topBtn = document.getElementById('top-btn');
+window.addEventListener('scroll', () => {
+  topBtn.classList.toggle('show', window.scrollY > 400);
+});
+topBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-
-  /* --------------------------------------------------------
-     5. CONTACT FORM (web3forms + sweetalert2)
-  -------------------------------------------------------- */
-  const form = document.getElementById('contato-form');
-  const ACCESS_KEY = '9fc1f0ed-f1ec-47ac-97fe-a08c6ad082c9';
-  const WA_NUMBER = '5541984084116';
-
-  form && form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const name    = formData.get('name')    || 'Não informado';
-    const email   = formData.get('email')   || 'Não informado';
-    const servico = formData.get('servico') || 'Não selecionado';
-    const prazo   = formData.get('prazo')   || 'Não informado';
-    const message = formData.get('message') || 'Não informado';
-
-    const waText = [
-      'Olá Felipe!',
-      '',
-      'Solicitei orçamento/contato pelo portfólio:',
-      '',
-      `*Nome:* ${name}`,
-      `*E-mail:* ${email}`,
-      `*Tipo de Serviço:* ${servico}`,
-      `*Prazo:* ${prazo}`,
-      '',
-      '*Mensagem / Projeto:*',
-      message,
-      '',
-      '---',
-      'Enviado via site',
-    ].join('%0A');
-
-    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(decodeURIComponent(waText))}`;
-
-    formData.append('access_key', ACCESS_KEY);
-    formData.append('subject', `Novo Orçamento/Contato — ${name} (${servico})`);
-
-    const submitBtn = form.querySelector('.btn-submit');
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-    }
-
-    try {
-      const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
-      const json = await res.json();
-
-      if (json.success) {
-        const result = await Swal.fire({
-          title: 'Enviado com sucesso! 🎉',
-          text: 'Deseja abrir o WhatsApp com os detalhes prontos?',
-          icon: 'success',
-          showCancelButton: true,
-          confirmButtonColor: '#c45c1a',
-          cancelButtonColor: '#8a7f72',
-          confirmButtonText: 'Sim, abrir WhatsApp',
-          cancelButtonText: 'Não, obrigado',
-        });
-
-        if (result.isConfirmed) {
-          window.open(waUrl, '_blank');
-          Swal.fire({ title: 'Pronto!', text: 'WhatsApp aberto! Aguardo seu contato.', icon: 'success', confirmButtonColor: '#c45c1a' });
-        } else {
-          Swal.fire({ title: 'Tudo certo!', text: 'Mensagem recebida! Qualquer coisa, use o botão flutuante do WhatsApp.', icon: 'success', confirmButtonColor: '#c45c1a' });
-        }
-        form.reset();
-      } else {
-        Swal.fire({ title: 'Ops...', text: 'Erro ao enviar. Tente novamente ou use o botão do WhatsApp.', icon: 'error', confirmButtonColor: '#c45c1a' });
-      }
-    } catch (err) {
-      console.error('Form error:', err);
-      Swal.fire({ title: 'Erro de conexão', text: 'Falha na conexão. Use o botão flutuante do WhatsApp.', icon: 'error', confirmButtonColor: '#c45c1a' });
-    } finally {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Enviar Solicitação <i class="fas fa-paper-plane"></i>';
-      }
+// ── REVEAL ON SCROLL ──
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      revealObserver.unobserve(entry.target);
     }
   });
+}, { threshold: 0.12 });
 
-})();
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── SMOOTH NAV LINKS ──
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = document.getElementById('nav').offsetHeight;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    }
+  });
+});
+
+// ── FORM SUBMIT (mailto fallback) ──
+const form = document.getElementById('form');
+form?.addEventListener('submit', e => {
+  e.preventDefault();
+  const data = new FormData(form);
+  const name    = data.get('name');
+  const email   = data.get('email');
+  const servico = data.get('servico');
+  const msg     = data.get('message');
+
+  const body = `Nome: ${name}%0AE-mail: ${email}%0AServiço: ${servico}%0A%0AMensagem:%0A${msg}`;
+  const waMsg = encodeURIComponent(`Oi Felipe! Sou ${name} (${email}).%0AServiço: ${servico}%0A${msg}`);
+
+  // Abre WhatsApp com mensagem pré-preenchida
+  window.open(`https://wa.me/5541984084116?text=${waMsg}`, '_blank');
+  form.reset();
+
+  // Feedback visual
+  const btn = form.querySelector('.fsubmit');
+  const orig = btn.innerHTML;
+  btn.innerHTML = '<span>Mensagem enviada! ✓</span>';
+  btn.style.background = '#4caf50';
+  setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 3000);
+});
+
+// ── PILLAR HOVER expand desc ──
+document.querySelectorAll('.pillar').forEach(p => {
+  const desc = p.querySelector('.pillar-desc');
+  p.addEventListener('mouseenter', () => {
+    desc.style.maxHeight = '80px';
+    desc.style.opacity   = '1';
+  });
+  p.addEventListener('mouseleave', () => {
+    desc.style.maxHeight = '';
+    desc.style.opacity   = '';
+  });
+});
