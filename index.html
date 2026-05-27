@@ -5,162 +5,219 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Felipe Santos · Android Dev</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="nav-logo">FS<span class="blink">_</span></div>
-  <ul class="nav-links">
-    <li><a href="#sobre">sobre</a></li>
-    <li><a href="#stack">stack</a></li>
-    <li><a href="#projetos">projetos</a></li>
-    <li><a href="#contato">contato</a></li>
-  </ul>
-  <div class="nav-avail"><div class="nav-dot"></div><span class="mono">disponível</span></div>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">FS<span class="dot">_</span></a>
+    <ul class="nav-menu">
+      <li><a href="#sobre">sobre</a></li>
+      <li><a href="#stack">stack</a></li>
+      <li><a href="#projetos">projetos</a></li>
+      <li><a href="#contato">contato</a></li>
+    </ul>
+    <div class="status">
+      <div class="status-dot"></div>
+      <span>disponível</span>
+    </div>
+  </div>
 </nav>
 
-<!-- ══════════ HERO ══════════ -->
-<section id="home">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-
-  <div class="hero-inner">
-    <div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-container">
+    <div class="hero-content">
       <div class="hero-tag">
-        <span>[</span> analista de sistemas <span>·</span> curitiba / pr <span>]</span>
+        <span>✦</span> analista de sistemas · curitiba/pr <span>✦</span>
       </div>
-      <h1 class="hero-name">
-        <span style="display:block">FELIPE</span>
-        <span class="line2" style="display:block">SANTOS</span>
+      <h1 class="hero-title">
+        <span>FELIPE</span>
+        <span class="accent">SANTOS</span>
       </h1>
       <div class="hero-sub">
-        <span>Android Dev</span>
-        <span class="sl">/</span>
-        <span>SQL Server</span>
-        <span class="sl">/</span>
-        <span>Automação</span>
+        <span>Android Dev</span> <span class="sep">/</span> <span>SQL Server</span> <span class="sep">/</span> <span>Automação</span>
       </div>
-      <p class="hero-bio">
-        Construo apps Android nativos que integram ERP, automatizo processos
-        empresariais e otimizo SQL Server — soluções que
-        <em>funcionam de verdade</em> no dia a dia da empresa.
+      <p class="hero-text">
+        Crio apps Android nativos com integração ERP, automação de processos e queries SQL de alto desempenho. Soluções que realmente funcionam no dia a dia da empresa.
       </p>
-      <div class="hero-btns">
-        <a href="#projetos" class="btn-p">Ver Projetos →</a>
-        <a href="#contato" class="btn-g">contato</a>
+      <div class="hero-buttons">
+        <a href="#projetos" class="btn-primary">Ver projetos →</a>
+        <a href="#contato" class="btn-secondary">contato</a>
       </div>
-      <div class="hero-socials">
-        <a href="https://github.com/felipe-santos-tech" target="_blank" class="soc"><span class="soc-badge">GH</span>github</a>
-        <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="soc"><span class="soc-badge">LI</span>linkedin</a>
-        <a href="https://wa.me/5541984084116" target="_blank" class="soc"><span class="soc-badge">WA</span>whatsapp</a>
-        <a href="https://felipe-santos-tech.github.io" target="_blank" class="soc"><span class="soc-badge">🌐</span>portfólio</a>
+      <div class="hero-social">
+        <a href="https://github.com/felipe-santos-tech" target="_blank" class="social-link"><span class="social-icon">GH</span> github</a>
+        <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="social-link"><span class="social-icon">LI</span> linkedin</a>
+        <a href="https://wa.me/5541984084116" target="_blank" class="social-link"><span class="social-icon">WA</span> whatsapp</a>
+        <a href="https://felipe-santos-tech.github.io" target="_blank" class="social-link"><span class="social-icon">🌐</span> portfólio</a>
       </div>
     </div>
 
-    <div>
-      <div class="hcard">
-        <div class="hc-row">
-          <div class="hc-av">FS</div>
-          <div><div class="hc-name">Felipe Santos</div><div class="hc-loc mono">📍 Curitiba, PR</div></div>
-          <span class="hc-badge mono">disponível</span>
+    <div class="hero-card">
+      <div class="card-profile">
+        <div class="avatar">FS</div>
+        <div>
+          <h3>Felipe Santos</h3>
+          <p>📍 Curitiba, PR</p>
         </div>
-        <div class="hc-div"></div>
-        <div class="hc-metrics">
-          <div class="hc-m"><span class="hc-mn">40%</span><span class="hc-ml">produtividade</span></div>
-          <div class="hc-msep"></div>
-          <div class="hc-m"><span class="hc-mn">2+</span><span class="hc-ml">apps entregues</span></div>
-          <div class="hc-msep"></div>
-          <div class="hc-m"><span class="hc-mn">8+</span><span class="hc-ml">tecnologias</span></div>
-        </div>
-        <div class="hc-div"></div>
-        <div class="hc-status">
-          <div class="hc-si"><span class="hc-dot"></span><span>Analista de Sistemas</span></div>
-          <div class="hc-si"><span class="hc-dot"></span><span>Aberto a freelance</span></div>
-          <div class="hc-si"><span class="hc-dot amber"></span><span>ERP em andamento</span></div>
-        </div>
+        <span class="badge">disponível</span>
       </div>
-      <div class="hterm">
-        <div class="hterm-bar"><span></span><span></span><span></span><span class="hterm-title">bash</span></div>
-        <div class="hterm-body mono">
-          <div><span class="tc">$</span> <span class="tk">git</span> push origin <span class="tv">main</span></div>
-          <div><span class="tok">✓</span> ERP modernization · sprint 12</div>
-          <div class="tc">branch: feature/sql-optimization</div>
+      <div class="card-stats">
+        <div><span class="stat-number">40%</span><span class="stat-label">produtividade</span></div>
+        <div class="divider"></div>
+        <div><span class="stat-number">2+</span><span class="stat-label">apps entregues</span></div>
+        <div class="divider"></div>
+        <div><span class="stat-number">8+</span><span class="stat-label">tecnologias</span></div>
+      </div>
+      <div class="card-status">
+        <div><span class="dot green"></span> Analista de Sistemas</div>
+        <div><span class="dot green"></span> Aberto a freelance</div>
+        <div><span class="dot yellow"></span> ERP em andamento</div>
+      </div>
+      <div class="card-terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span><span>bash</span></div>
+        <div class="terminal-body">
+          <div><span class="prompt">$</span> git push origin main</div>
+          <div><span class="success">✓</span> ERP modernization · sprint 12</div>
+          <div>branch: feature/sql-optimization</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="hero-scroll mono">scroll ↓</div>
+  <div class="scroll-hint">scroll ↓</div>
 </section>
 
-<!-- ══════════ SOBRE ══════════ -->
+<!-- SOBRE -->
 <section id="sobre">
-  <div class="wrap">
-    <div class="sec-label mono rv">01 // sobre</div>
-    <div class="sobre-grid">
-      <div class="rv">
-        <h2 class="sec-title">Quem<br><em>sou eu</em></h2>
-        <div class="sobre-bio">
-          <p>Tenho <strong>23 anos</strong> e atuo como <strong>Analista de Sistemas</strong>, estudante de <strong>Engenharia de Software</strong>. Tudo começou em 2024, quando fui desafiado a criar um app de checklist digital para manutenção preventiva — aquilo mudou minha trajetória.</p>
-          <p>Hoje crio inovação real para empresas: <strong>apps Android</strong> que se comunicam com ERP, <strong>automações Delphi</strong> que eliminam retrabalho e <strong>queries SQL Server</strong> que entregam dados precisos para decisões estratégicas.</p>
+  <div class="container">
+    <div class="section-label">01 // sobre</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Quem <span class="accent">sou eu</span></h2>
+        <p>Tenho <strong>23 anos</strong> e atuo como <strong>Analista de Sistemas</strong>, estudante de <strong>Engenharia de Software</strong>. Tudo começou em 2024 com um desafio: criar um app de checklist para manutenção preventiva — ali minha trajetória mudou.</p>
+        <p>Hoje entrego <strong>apps Android</strong> conectados a ERPs, <strong>automações Delphi</strong> que eliminam retrabalho e <strong>queries SQL Server</strong> que dão suporte a decisões estratégicas.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-num">01</span>
+          <span class="pillar-icon">📱</span>
+          <div><h4>Mobile Native</h4><p>Apps Android com Java, integração ERP, assinatura digital e relatórios em tempo real.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">02</span>
+          <span class="pillar-icon">🗄️</span>
+          <div><h4>SQL & Dados</h4><p>SQL Server, T-SQL, queries dinâmicas, modelagem e integração com sistemas legados.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">03</span>
+          <span class="pillar-icon">⚡</span>
+          <div><h4>Automação</h4><p>Delphi para processos internos, redução de erros, geração de relatórios e exportação XLSX.</p></div>
         </div>
       </div>
-      <div class="pillars rv">
-        <div class="pillar"><span class="pillar-num">01</span><span class="pillar-icon">📱</span><div><div class="pillar-title">Mobile Native</div><div class="pillar-desc">Apps Android com Java — integração ERP, assinatura digital, relatórios em tempo real.</div></div></div>
-        <div class="pillar"><span class="pillar-num">02</span><span class="pillar-icon">🗄️</span><div><div class="pillar-title">SQL & Dados</div><div class="pillar-desc">SQL Server, T-SQL, queries dinâmicas, modelagem e integração com sistemas legados.</div></div></div>
-        <div class="pillar"><span class="pillar-num">03</span><span class="pillar-icon">⚡</span><div><div class="pillar-title">Automação</div><div class="pillar-desc">Processos com Delphi — redução de erros, geração de relatórios, exportação XLSX.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack">
+  <div class="container">
+    <div class="section-label">02 // stack</div>
+    <h2 class="section-title">Ferramentas <span class="accent">& Tecnologias</span></h2>
+    <div class="stack-grid">
+      <div class="stack-card"><h3>Mobile</h3><ul><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"> Java</li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" alt="Android"> Android</li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"> Android Studio</li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"> SQLite / Room</li></ul></div>
+      <div class="stack-card"><h3>Banco de Dados</h3><ul><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server"> SQL Server</li><li><span class="emoji-icon">🔗</span> Integração ERP</li></ul></div>
+      <div class="stack-card"><h3>Automação</h3><ul><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/delphi/delphi-original.svg" alt="Delphi"> Delphi</li><li><span class="emoji-icon">📊</span> Fast Report</li><li><span class="emoji-icon">📄</span> SheetJS / XLSX</li></ul></div>
+      <div class="stack-card"><h3>Ferramentas & Web</h3><ul><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"> Git / GitHub</li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"> HTML5</li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"> CSS3</li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS"> JavaScript</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <div class="container">
+    <div class="section-label">03 // projetos</div>
+    <h2 class="section-title">O que já <span class="accent">construí</span></h2>
+    <div class="project-highlight">
+      <div>
+        <div class="highlight-meta"><span>001</span><span class="badge">★ destaque</span></div>
+        <h3>Checklist Digital de Veículos</h3>
+        <p>App Android para gestão de checklists de entrada/saída de veículos, com login, fotos, assinatura digital e integração com SQL Server e ERP.</p>
+        <div class="highlight-stats"><span>↑40% produtividade</span><span>↓30% erros manuais</span></div>
+        <div class="tech-tags"><span>Java</span><span>Android Studio</span><span>SQL Server</span><span>Delphi</span><span>Fast Report</span></div>
+        <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="link-arrow">→ github.com/felipe-santos-tech</a>
+      </div>
+      <div class="phone-mock">
+        <div class="mock-bar"></div>
+        <div class="mock-row"><span class="dot-green"></span> Entrada — Truck #41</div>
+        <div class="mock-row"><span class="dot-green"></span> Combustível: 78%</div>
+        <div class="mock-row"><span class="dot-yellow"></span> Foto — capturada</div>
+        <div class="mock-row"><span class="dot-green"></span> Assinatura — OK</div>
+        <div class="mock-sync">SYNC ERP ↗</div>
+      </div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card"><div><span class="card-num">002</span></div><h3>Controle de EPI & SESMT</h3><p>App Android para entrega e controle de EPIs/EPCs conforme NR-6, com assinatura digital.</p><div class="card-metrics"><span>↑40% agilidade</span><span>✓ NR-6</span></div><div class="tech-tags"><span>Java</span><span>SQL Server</span><span>SQLite</span></div><a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="link-arrow">→ Ver repositório</a></div>
+      <div class="project-card wip"><div><span class="card-num">003</span><span class="wip-badge">🔄 em andamento</span></div><h3>Modernização de ERP Industrial</h3><p>Modernização e implantação de ERP industrial com reestruturação de processos e governança de dados. Sprint 12.</p><div class="card-metrics"><span>Jan/2026 — atual</span></div><div class="tech-tags"><span>SQL Server</span><span>Java</span><span>Delphi</span></div></div>
+      <div class="project-card"><div><span class="card-num">+ xp</span></div><h3>Experiência Técnica</h3><ul><li>Filtros SQL dinâmicos</li><li>Integração Android ↔ ERP</li><li>Automação Delphi com XLSX</li><li>Relatórios Fast Report</li><li>Canvas API para assinaturas</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO (redesign único) -->
+<section id="contato">
+  <div class="container">
+    <div class="section-label">04 // contato</div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h2 class="section-title">Vamos <span class="accent">conversar?</span></h2>
+        <p>Precisa de um app Android, automação ou consultoria em SQL? Me mande uma mensagem — respondo em menos de 24h.</p>
+        <div class="contact-list">
+          <a href="https://wa.me/5541984084116" target="_blank" class="contact-item">
+            <div class="contact-icon wa">WA</div>
+            <div><span>WhatsApp</span><strong>+55 41 98408-4116</strong></div>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="contact-item">
+            <div class="contact-icon li">LI</div>
+            <div><span>LinkedIn</span><strong>felipe-santos-tech</strong></div>
+            <span class="arrow">→</span>
+          </a>
+          <a href="https://github.com/felipe-santos-tech" target="_blank" class="contact-item">
+            <div class="contact-icon gh">GH</div>
+            <div><span>GitHub</span><strong>@felipe-santos-tech</strong></div>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <p class="response-note">⚡ resposta em até 24 horas</p>
+      </div>
+      <div class="contact-form">
+        <form id="cform">
+          <div class="form-group"><label>nome</label><input type="text" name="name" required placeholder="Seu nome"></div>
+          <div class="form-row"><div class="form-group"><label>e-mail</label><input type="email" name="email" required placeholder="seu@email.com"></div><div class="form-group"><label>serviço</label><select name="servico" required><option value="">Selecione...</option><option>Desenvolvimento Android</option><option>Automação de Processos</option><option>SQL / Banco de Dados</option><option>Criação de Sites</option><option>Outro</option></select></div></div>
+          <div class="form-group"><label>mensagem</label><textarea name="message" rows="4" required placeholder="Descreva seu projeto..."></textarea></div>
+          <button type="submit" class="btn-submit">Enviar mensagem ✈</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ STACK ══════════ -->
-<section id="stack">
-  <div class="wrap">
-    <div class="sec-label mono rv">02 // stack</div>
-    <h2 class="sec-title rv">Ferramentas<br><em>& Tecnologias</em></h2>
-    <div class="stack-grid">
-      <div class="scol rv"><div class="scol-title">Mobile</div><div class="sitems"><div class="sitem feat"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"><div><div class="si-name">Java</div><div class="si-sub mono">principal</div></div></div><div class="sitem feat"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" alt="Android"><div><div class="si-name">Android</div><div class="si-sub mono">nativo</div></div></div><div class="sitem"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"><div><div class="si-name">Android Studio</div><div class="si-sub mono">IDE</div></div></div><div class="sitem"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"><div><div class="si-name">SQLite / Room</div><div class="si-sub mono">offline storage</div></div></div></div></div>
-      <div class="scol rv"><div class="scol-title">Banco de Dados</div><div class="sitems"><div class="sitem feat"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server"><div><div class="si-name">SQL Server</div><div class="si-sub mono">SSMS · T-SQL</div></div></div><div class="sitem"><span class="sitem-icon">🔗</span><div><div class="si-name">Integração ERP</div><div class="si-sub mono">queries dinâmicas</div></div></div></div></div>
-      <div class="scol rv"><div class="scol-title">Automação</div><div class="sitems"><div class="sitem feat"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/delphi/delphi-original.svg" alt="Delphi"><div><div class="si-name">Delphi</div><div class="si-sub mono">automação · ERP</div></div></div><div class="sitem"><span class="sitem-icon">📊</span><div><div class="si-name">Fast Report</div><div class="si-sub mono">relatórios</div></div></div><div class="sitem"><span class="sitem-icon">📄</span><div><div class="si-name">SheetJS / XLSX</div><div class="si-sub mono">exportação</div></div></div></div></div>
-      <div class="scol rv"><div class="scol-title">Ferramentas & Web</div><div class="sitems"><div class="sitem feat"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"><div><div class="si-name">Git / GitHub</div><div class="si-sub mono">versionamento</div></div></div><div class="sitem"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"><div><div class="si-name">HTML5</div><div class="si-sub mono">markup</div></div></div><div class="sitem"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"><div><div class="si-name">CSS3</div><div class="si-sub mono">estilo</div></div></div><div class="sitem"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"><div><div class="si-name">JavaScript</div><div class="si-sub mono">scripts</div></div></div></div></div>
-    </div>
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">FS<span class="dot">_</span></div>
+    <p>Android Dev · SQL Server · Curitiba/PR</p>
+    <span>Feito com ☕ · GitHub Pages · © 2026</span>
   </div>
-</section>
+</footer>
 
-<!-- ══════════ PROJETOS ══════════ -->
-<section id="projetos">
-  <div class="wrap">
-    <div class="sec-label mono rv">03 // projetos</div>
-    <h2 class="sec-title rv">O que já<br><em>construí</em></h2>
-    <div class="proj-hero rv">
-      <div><div class="ph-meta"><span class="ph-num mono">001</span><span class="ph-badge mono">★ destaque</span></div><h3 class="ph-title">Checklist Digital de Veículos</h3><p class="ph-desc">App Android para gestão de checklists de entrada/saída de veículos, com login, captura de fotos, assinaturas digitais, medição de combustível e integração em tempo real com SQL Server e ERP corporativo.</p><div class="ph-metrics"><div class="ph-metric"><span class="ph-n">↑40%</span><span class="ph-l">produtividade</span></div><div class="ph-metric"><span class="ph-n">↓30%</span><span class="ph-l">erros manuais</span></div></div><div class="tags"><span class="tag">Java</span><span class="tag">Android Studio</span><span class="tag">SQL Server</span><span class="tag">Delphi</span><span class="tag">Fast Report</span></div><a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="plink mono">→ github.com/felipe-santos-tech</a></div>
-      <div class="phone"><div class="ph-bar"></div><div class="ph-row"><span class="pdot g"></span><span>Entrada — Truck #41</span></div><div class="ph-row"><span class="pdot g"></span><span>Combustível: 78%</span></div><div class="ph-row"><span class="pdot y"></span><span>Foto — capturada</span></div><div class="ph-row"><span class="pdot g"></span><span>Assinatura — OK</span></div><div class="ph-sync">SYNC ERP ↗</div></div>
-    </div>
-    <div class="proj-grid">
-      <div class="pcard rv"><div class="pcard-top"><span class="pcard-num mono">002</span></div><h3 class="pcard-title">Controle de EPI & SESMT</h3><p class="pcard-desc">App Android para entrega e controle de EPIs/EPCs conforme NR-6, com assinatura digital e rastreabilidade completa por colaborador.</p><div class="pcard-metrics"><span class="pm">↑ 40% agilidade</span><span class="pm">✓ NR-6</span></div><div class="tags"><span class="tag">Java</span><span class="tag">SQL Server</span><span class="tag">SQLite</span></div><a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="plink mono">→ Ver repositório</a></div>
-      <div class="pcard wip rv"><div class="pcard-top"><span class="pcard-num mono">003</span><span class="pcard-wip mono">🔄 em andamento</span></div><h3 class="pcard-title">Modernização de ERP Industrial</h3><p class="pcard-desc">Modernização e implantação de ERP industrial com reestruturação de processos, análise AS-IS/TO-BE e governança de dados. Sprint 12.</p><div class="pcard-metrics"><span class="pm dim">Jan/2026 — atual</span></div><div class="tags"><span class="tag">SQL Server</span><span class="tag">Java</span><span class="tag">Delphi</span></div></div>
-      <div class="pcard rv"><div class="pcard-top"><span class="pcard-num mono">+ xp</span></div><h3 class="pcard-title">Experiência Técnica</h3><ul class="xp-list"><li>Filtros SQL dinâmicos e queries otimizadas</li><li>Integração Android ↔ ERP via REST/JSON</li><li>Automação Delphi com exportação XLSX</li><li>Relatórios Fast Report e docs LaTeX</li><li>Canvas API para assinaturas digitais</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ CONTATO ══════════ -->
-<section id="contato">
-  <div class="wrap">
-    <div class="sec-label mono rv">04 // contato</div>
-    <div class="contact-grid">
-      <div class="rv"><h2 class="sec-title">Bora<br><em>conversar?</em></h2><p class="contact-desc">Precisa de app Android, automação de processo ou integração SQL? Me manda mensagem — respondo em menos de 24h. 🚀</p><div class="clinks"><a href="https://wa.me/5541984084116" target="_blank" class="clink"><div class="clink-ico">WA</div><div><div class="clink-lbl mono">WhatsApp</div><div class="clink-val">+55 41 98408-4116</div></div><span class="clink-arr">→</span></a><a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="clink"><div class="clink-ico">LI</div><div><div class="clink-lbl mono">LinkedIn</div><div class="clink-val">felipe-santos-tech</div></div><span class="clink-arr">→</span></a><a href="https://github.com/felipe-santos-tech" target="_blank" class="clink"><div class="clink-ico">GH</div><div><div class="clink-lbl mono">GitHub</div><div class="clink-val">@felipe-santos-tech</div></div><span class="clink-arr">→</span></a></div><p class="contact-note">// resposta em &lt; 24h ⚡</p></div>
-      <div class="rv"><form class="cform" id="cform"><div class="fg"><label class="flbl">nome</label><input type="text" name="name" required class="finp" placeholder="Seu nome completo"></div><div class="frow"><div class="fg"><label class="flbl">e-mail</label><input type="email" name="email" required class="finp" placeholder="seu@email.com"></div><div class="fg"><label class="flbl">serviço</label><select name="servico" required class="finp"><option value="">Selecione...</option><option>Desenvolvimento Android</option><option>Automação de Processos</option><option>SQL / Banco de Dados</option><option>Criação de Sites</option><option>Outro</option></select></div></div><div class="fg"><label class="flbl">mensagem</label><textarea name="message" rows="5" required class="finp" placeholder="Descreva seu projeto..."></textarea></div><button type="submit" class="fsub" id="fsub">Enviar Mensagem ✈</button></form></div>
-    </div>
-  </div>
-</section>
-
-<footer><div class="foot-inner"><div class="foot-logo">FS<span class="blink">_</span></div><div class="foot-sub">Android Dev · SQL Server · Curitiba / PR</div><div class="foot-copy">Feito com ☕ · GitHub Pages · © 2026</div></div></footer>
-
-<div class="fabs"><button id="topbtn" class="fab" title="Voltar ao topo">↑</button><a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar." target="_blank" class="fab fab-wa">WA</a></div>
+<div class="fab-container">
+  <button id="topbtn" class="fab">↑</button>
+  <a href="https://wa.me/5541984084116?text=Oi%20Felipe!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar." target="_blank" class="fab wa">WA</a>
+</div>
 
 <script src="js/script.js"></script>
 </body>
