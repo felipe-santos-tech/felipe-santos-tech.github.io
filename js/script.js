@@ -1,59 +1,75 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const nav = document.getElementById('nav');
   const topbtn = document.getElementById('topbtn');
   const form = document.getElementById('cform');
-  const fsub = document.getElementById('fsub');
+  const submitBtn = document.querySelector('.btn-submit');
 
+  // Scroll: mostrar botão topo
   window.addEventListener('scroll', () => {
-    if (nav) nav.style.background = window.scrollY > 60 ? 'rgba(7,9,13,.98)' : 'rgba(7,9,13,.9)';
-    if (topbtn) topbtn.classList.toggle('show', window.scrollY > 400);
+    if (topbtn) {
+      topbtn.classList.toggle('show', window.scrollY > 400);
+    }
   });
 
+  // Botão voltar ao topo
   if (topbtn) {
-    topbtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    topbtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
+  // Navegação suave
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
+      const target = document.querySelector(targetId);
+      if (target) {
         e.preventDefault();
-        window.scrollTo({ top: targetElement.offsetTop - 70, behavior: 'smooth' });
+        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
       }
     });
   });
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, idx) => {
+  // Reveal nas seções
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('in'), idx * 90);
-        revealObserver.unobserve(entry.target);
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.rv').forEach(el => revealObserver.observe(el));
 
+  document.querySelectorAll('.rv, .about-grid, .stack-grid, .project-card, .contact-wrapper').forEach(el => {
+    el.classList.add('rv');
+    observer.observe(el);
+  });
+
+  // Estilo base para reveal (adicionei no CSS inline? melhor garantir)
+  const styleRV = document.createElement('style');
+  styleRV.textContent = `.rv { opacity: 0; transform: translateY(20px); transition: all 0.5s ease; } .rv.in { opacity: 1; transform: translateY(0); }`;
+  document.head.appendChild(styleRV);
+
+  // Formulário WhatsApp
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const formData = new FormData(form);
-      const name = formData.get('name') || '';
-      const email = formData.get('email') || '';
-      const service = formData.get('servico') || '';
-      const message = formData.get('message') || '';
-      const whatsappMsg = encodeURIComponent(`Oi Felipe! Sou ${name} (${email}).\nServiço: ${service}\n\n${message}`);
-      window.open(`https://wa.me/5541984084116?text=${whatsappMsg}`, '_blank');
-      if (fsub) {
-        fsub.textContent = 'Enviado! ✓';
-        fsub.style.background = '#4ade80';
+      const data = new FormData(form);
+      const name = data.get('name') || '';
+      const email = data.get('email') || '';
+      const service = data.get('servico') || '';
+      const message = data.get('message') || '';
+      const text = `Oi Felipe! Sou ${name} (${email}).\nServiço: ${service}\n\n${message}`;
+      window.open(`https://wa.me/5541984084116?text=${encodeURIComponent(text)}`, '_blank');
+      if (submitBtn) {
+        submitBtn.textContent = 'Enviado! ✓';
+        submitBtn.style.background = '#10b981';
       }
       form.reset();
       setTimeout(() => {
-        if (fsub) {
-          fsub.textContent = 'Enviar Mensagem ✈';
-          fsub.style.background = '';
+        if (submitBtn) {
+          submitBtn.textContent = 'Enviar mensagem ✈';
+          submitBtn.style.background = '';
         }
       }, 3000);
     });
