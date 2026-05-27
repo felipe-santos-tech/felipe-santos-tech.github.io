@@ -363,95 +363,146 @@
       </div>
     </section>
 
-    <!-- ══════ PROJETOS ══════ -->
-    <section id="projetos" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="sh-num mono">// 04</span>
-          <h2 class="sh-title">Projetos em destaque</h2>
+   <!-- ══════ PROJETOS ══════ -->
+<section id="projetos" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="sh-num mono">// 04</span>
+      <h2 class="sh-title">Projetos em destaque</h2>
+    </div>
+
+    <div class="projetos-layout">
+
+      <!-- ─────────────────────────────────────────
+           CARD DESTAQUE (apenas 1, fica à esquerda)
+           Para trocar: edite os campos abaixo.
+      ────────────────────────────────────────── -->
+      <div class="proj-featured fade-up">
+        <div class="pf-badge">⭐ Destaque</div>
+
+        <!-- Emoji do projeto -->
+        <div class="pf-icon">🚛</div>
+
+        <!-- Título e descrição -->
+        <h3 class="pf-title">Checklist Digital de Veículos</h3>
+        <p class="pf-desc">App Android para gestão de checklists de entrada/saída de veículos com login, captura de fotos, assinatura digital, medição de combustível e integração em tempo real com SQL Server e ERP corporativo.</p>
+
+        <!-- Métricas de impacto -->
+        <div class="pf-results">
+          <div class="pfr-item">
+            <span class="pfr-n">↑40%</span>
+            <span class="pfr-l mono">produtividade</span>
+          </div>
+          <div class="pfr-item">
+            <span class="pfr-n">↓30%</span>
+            <span class="pfr-l mono">erros manuais</span>
+          </div>
+          <!-- PARA ADICIONAR MAIS MÉTRICAS: copie o bloco abaixo
+          <div class="pfr-item">
+            <span class="pfr-n">↑X%</span>
+            <span class="pfr-l mono">descrição</span>
+          </div>
+          -->
         </div>
 
-        <div class="projetos-layout">
-
-          <!-- Destaque -->
-          <div class="proj-featured fade-up">
-            <div class="pf-badge">⭐ Destaque</div>
-            <div class="pf-icon">🚛</div>
-            <h3 class="pf-title">Checklist Digital de Veículos</h3>
-            <p class="pf-desc">App Android para gestão de checklists de entrada/saída de veículos com login, captura de fotos, assinatura digital, medição de combustível e integração em tempo real com SQL Server e ERP corporativo.</p>
-            <div class="pf-results">
-              <div class="pfr-item">
-                <span class="pfr-n">↑40%</span>
-                <span class="pfr-l mono">produtividade</span>
-              </div>
-              <div class="pfr-item">
-                <span class="pfr-n">↓30%</span>
-                <span class="pfr-l mono">erros manuais</span>
-              </div>
-            </div>
-            <div class="proj-tags">
-              <span class="ptag">Java</span>
-              <span class="ptag">Android Studio</span>
-              <span class="ptag">SQL Server</span>
-              <span class="ptag">Delphi</span>
-              <span class="ptag">Fast Report</span>
-            </div>
-            <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="proj-link mono">
-              <i class="fab fa-github"></i> Ver repositório <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Grid -->
-          <div class="proj-grid">
-            <div class="proj-card fade-up delay-1">
-              <div class="proj-card-icon">🦺</div>
-              <h3>Controle de EPI & SESMT</h3>
-              <p>App Android para entrega e controle de EPIs conforme NR-6, com assinatura digital e rastreabilidade completa por colaborador.</p>
-              <div class="proj-metrics">
-                <span class="pm">↑ 40% agilidade</span>
-                <span class="pm">✓ NR-6</span>
-              </div>
-              <div class="proj-tags">
-                <span class="ptag">Java</span>
-                <span class="ptag">SQL Server</span>
-                <span class="ptag">SQLite</span>
-              </div>
-              <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="proj-link mono">
-                <i class="fab fa-github"></i> Repositório <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="proj-card wip fade-up delay-2">
-              <div class="proj-card-icon">🏭</div>
-              <span class="wip-badge mono">🔄 em andamento</span>
-              <h3>Modernização de ERP Industrial</h3>
-              <p>Reestruturação e implantação de ERP industrial com análise AS-IS/TO-BE, governança de dados e sprints de migração.</p>
-              <div class="proj-metrics">
-                <span class="pm muted">Jan/2026 — atual</span>
-              </div>
-              <div class="proj-tags">
-                <span class="ptag">SQL Server</span>
-                <span class="ptag">Java</span>
-                <span class="ptag">Delphi</span>
-              </div>
-            </div>
-
-            <div class="proj-card xp fade-up delay-3">
-              <div class="proj-card-icon">💡</div>
-              <h3>Experiência Técnica</h3>
-              <ul class="xp-list">
-                <li>Filtros SQL dinâmicos e queries otimizadas</li>
-                <li>Integração Android ↔ ERP via REST/JSON</li>
-                <li>Canvas API para assinaturas digitais</li>
-                <li>Automação Delphi com exportação XLSX</li>
-                <li>Relatórios Fast Report e documentação LaTeX</li>
-              </ul>
-            </div>
-          </div>
-
+        <!-- Tags de tecnologia -->
+        <div class="proj-tags">
+          <span class="ptag">Java</span>
+          <span class="ptag">Android Studio</span>
+          <span class="ptag">SQL Server</span>
+          <span class="ptag">Delphi</span>
+          <span class="ptag">Fast Report</span>
+          <!-- PARA ADICIONAR TAG: <span class="ptag">Nome</span> -->
         </div>
+
+        <!-- Link do repositório (remova se não tiver) -->
+        <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="proj-link mono">
+          <i class="fab fa-github"></i> Ver repositório <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
-    </section>
+
+
+      <!-- ─────────────────────────────────────────
+           GRID DE CARDS (ficam à direita, em coluna)
+           Máximo recomendado: 3 cards.
+           PARA ADICIONAR UM CARD NORMAL: copie o
+           bloco "proj-card" abaixo e cole aqui dentro.
+      ────────────────────────────────────────── -->
+      <div class="proj-grid">
+
+        <!-- ── CARD NORMAL ──────────────────────────
+             Copie este bloco inteiro para adicionar
+             um novo projeto simples.
+        ─────────────────────────────────────────── -->
+        <div class="proj-card fade-up delay-1">
+          <div class="proj-card-icon">🦺</div>
+          <h3>Controle de EPI & SESMT</h3>
+          <p>App Android para entrega e controle de EPIs conforme NR-6, com assinatura digital e rastreabilidade completa por colaborador.</p>
+          <div class="proj-metrics">
+            <span class="pm">↑ 40% agilidade</span>
+            <span class="pm">✓ NR-6</span>
+            <!-- PARA ADICIONAR MÉTRICA: <span class="pm">texto</span> -->
+          </div>
+          <div class="proj-tags">
+            <span class="ptag">Java</span>
+            <span class="ptag">SQL Server</span>
+            <span class="ptag">SQLite</span>
+          </div>
+          <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="proj-link mono">
+            <i class="fab fa-github"></i> Repositório <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <!-- ── FIM CARD NORMAL ── -->
+
+
+        <!-- ── CARD EM ANDAMENTO ────────────────────
+             Use quando o projeto ainda está sendo feito.
+             Diferença: tem a classe "wip" e o wip-badge.
+             Copie este bloco para adicionar outro WIP.
+        ─────────────────────────────────────────── -->
+        <div class="proj-card wip fade-up delay-2">
+          <div class="proj-card-icon">🏭</div>
+          <span class="wip-badge mono">🔄 em andamento</span>
+          <h3>Modernização de ERP Industrial</h3>
+          <p>Reestruturação e implantação de ERP industrial com análise AS-IS/TO-BE, governança de dados e sprints de migração.</p>
+          <div class="proj-metrics">
+            <span class="pm muted">Jan/2026 — atual</span>
+          </div>
+          <div class="proj-tags">
+            <span class="ptag">SQL Server</span>
+            <span class="ptag">Java</span>
+            <span class="ptag">Delphi</span>
+          </div>
+          <!-- Sem link pois está em andamento -->
+        </div>
+        <!-- ── FIM CARD EM ANDAMENTO ── -->
+
+
+        <!-- ── CARD DE LISTA (experiência/skills) ───
+             Use para listar habilidades ou experiências.
+             Diferença: tem a classe "xp" e usa <ul>.
+             Geralmente é o último card — não duplicar.
+        ─────────────────────────────────────────── -->
+        <div class="proj-card xp fade-up delay-3">
+          <div class="proj-card-icon">💡</div>
+          <h3>Experiência Técnica</h3>
+          <ul class="xp-list">
+            <li>Filtros SQL dinâmicos e queries otimizadas</li>
+            <li>Integração Android ↔ ERP via REST/JSON</li>
+            <li>Canvas API para assinaturas digitais</li>
+            <li>Automação Delphi com exportação XLSX</li>
+            <li>Relatórios Fast Report e documentação LaTeX</li>
+            <!-- PARA ADICIONAR ITEM: <li>texto</li> -->
+          </ul>
+        </div>
+        <!-- ── FIM CARD DE LISTA ── -->
+
+      </div>
+      <!-- ── FIM PROJ-GRID ── -->
+
+    </div>
+  </div>
+</section>
 
     <!-- ══════ CONTATO ══════ -->
 <section id="contato" class="section">
