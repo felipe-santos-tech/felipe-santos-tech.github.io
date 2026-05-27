@@ -96,33 +96,73 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => revealObserver.observe(el));
 
-// ── FORMULÁRIO → WHATSAPP ──
+// ── FORMULÁRIO → WEB3FORMS + WHATSAPP ──
 const form = document.getElementById('cform');
 const submitBtn = document.getElementById('submitBtn');
 
-form?.addEventListener('submit', e => {
+const whatsappNumber = '5541984084116';
+const accessKey = '9fc1f0ed-f1ec-47ac-97fe-a08c6ad082c9';
+
+form?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const fd   = new FormData(form);
-  const name = fd.get('name')    || '';
-  const mail = fd.get('email')   || '';
-  const serv = fd.get('servico') || '';
-  const msg  = fd.get('message') || '';
+  const formData = new FormData(form);
 
-  const text = encodeURIComponent(
-    `Oi Felipe! Sou ${name} (${mail}).\nServiço: ${serv}\n\n${msg}`
-  );
-  window.open(`https://wa.me/5541984084116?text=${text}`, '_blank');
+  const name    = formData.get('name')    || 'Não informado';
+  const email   = formData.get('email')   || 'Não informado';
+  const servico = formData.get('servico') || 'Não selecionado';
+  const message = formData.get('message') || 'Não informado';
 
-  const orig = submitBtn.innerHTML;
-  submitBtn.innerHTML = '<i class="fas fa-check"></i> Mensagem enviada!';
-  submitBtn.style.background = '#22c55e';
-  form.reset();
+  const waText = `Olá Felipe!%0A%0ASolicitei contato pelo portfólio:%0A%0A*Nome:* ${encodeURIComponent(name)}%0A*E-mail:* ${encodeURIComponent(email)}%0A*Tipo de Serviço:* ${encodeURIComponent(servico)}%0A%0A*Mensagem:*%0A${encodeURIComponent(message)}%0A%0A---%0AEnviado via site`;
+  const waUrl = `https://wa.me/${whatsappNumber}?text=${waText}`;
 
-  setTimeout(() => {
-    submitBtn.innerHTML = orig;
-    submitBtn.style.background = '';
-  }, 3500);
+  formData.append('access_key', accessKey);
+  formData.append('subject', `Novo Contato - ${name} (${servico})`);
+
+  const originalHTML = submitBtn.innerHTML;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+  submitBtn.disabled = true;
+
+  try {
+    const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+    const json = await res.json();
+
+    if (json.success) {
+      const result = await Swal.fire({
+        title: 'Mensagem enviada!',
+        text: 'Deseja abrir o WhatsApp com os detalhes prontos?',
+        icon: 'success',
+        background: '#0e1420',
+        color: '#e8f0ff',
+        showCancelButton: true,
+        confirmButtonColor: '#f97316',
+        cancelButtonColor: '#4a5870',
+        confirmButtonText: 'Sim, abrir WhatsApp',
+        cancelButtonText: 'Não, obrigado'
+      });
+
+      if (result.isConfirmed) window.open(waUrl, '_blank');
+
+      submitBtn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
+      submitBtn.style.background = '#22c55e';
+      form.reset();
+
+      setTimeout(() => {
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+      }, 3500);
+
+    } else {
+      Swal.fire({ title: 'Ops...', text: 'Erro ao enviar. Tente novamente.', icon: 'error', background: '#0e1420', color: '#e8f0ff' });
+      submitBtn.innerHTML = originalHTML;
+      submitBtn.disabled = false;
+    }
+
+  } catch (err) {
+    Swal.fire({ title: 'Erro', text: 'Falha na conexão. Use o WhatsApp flutuante.', icon: 'error', background: '#0e1420', color: '#e8f0ff' });
+    submitBtn.innerHTML = originalHTML;
+    submitBtn.disabled = false;
+  }
 });
-
 // ── NAV MOBILE: highlight no mobile ──
 // (a nav lateral some em mobile, mas deixa o scroll listener ativo pra quando tiver visível)

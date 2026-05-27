@@ -454,90 +454,88 @@
     </section>
 
     <!-- ══════ CONTATO ══════ -->
-    <section id="contato" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="sh-num mono">// 05</span>
-          <h2 class="sh-title">Vamos criar algo incrível?</h2>
-        </div>
+<section id="contato" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="sh-num mono">// 05</span>
+      <h2 class="sh-title">Vamos ter uma conversa?</h2>
+    </div>
 
-        <div class="contact-layout">
-          <div class="contact-left fade-up">
-            <div class="contact-profile">
-              <div class="cp-avatar">FS</div>
-              <div class="cp-info">
-                <div class="cp-name">Felipe Santos</div>
-                <div class="cp-role mono">Android Developer & Analista de Sistemas</div>
-              </div>
-            </div>
-
-            <p class="contact-desc">Precisa de um app Android, automação de processo ou integração SQL? Me manda uma mensagem!</p>
-
-            <div class="contact-links">
-              <a href="https://wa.me/5541984084116" target="_blank" class="cl-item">
-                <span class="cl-icon"><i class="fab fa-whatsapp"></i></span>
-                <div>
-                  <div class="cl-label mono">WhatsApp</div>
-                  <div class="cl-val">+55 41 98408-4116</div>
-                </div>
-                <i class="fas fa-arrow-right cl-arr"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="cl-item">
-                <span class="cl-icon"><i class="fab fa-linkedin-in"></i></span>
-                <div>
-                  <div class="cl-label mono">LinkedIn</div>
-                  <div class="cl-val">felipe-santos-tech</div>
-                </div>
-                <i class="fas fa-arrow-right cl-arr"></i>
-              </a>
-              <a href="https://github.com/felipe-santos-tech" target="_blank" class="cl-item">
-                <span class="cl-icon"><i class="fab fa-github"></i></span>
-                <div>
-                  <div class="cl-label mono">GitHub</div>
-                  <div class="cl-val">@felipe-santos-tech</div>
-                </div>
-                <i class="fas fa-arrow-right cl-arr"></i>
-              </a>
-            </div>
-
-            <div class="contact-response mono">
-              <i class="fas fa-bolt"></i> Resposta em menos de 24h
-            </div>
-          </div>
-
-          <div class="contact-right fade-up delay-1">
-            <form id="cform" class="contact-form">
-              <div class="form-group">
-                <input type="text" id="name" name="name" required placeholder=" ">
-                <label for="name">Nome completo</label>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" required placeholder=" ">
-                <label for="email">E-mail</label>
-              </div>
-              <div class="form-group">
-                <select id="servico" name="servico" required>
-                  <option value="" disabled selected></option>
-                  <option value="Desenvolvimento Android">📱 Desenvolvimento Android</option>
-                  <option value="Automação de Processos">⚙️ Automação de Processos</option>
-                  <option value="SQL / Banco de Dados">🗄️ SQL / Banco de Dados</option>
-                  <option value="Consultoria ERP">🏭 Consultoria ERP</option>
-                  <option value="Outros">👀 Outros assuntos</option>
-                </select>
-                <label for="servico">Tipo de serviço</label>
-              </div>
-              <div class="form-group">
-                <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
-                <label for="message">Sua mensagem</label>
-              </div>
-              <button type="submit" class="submit-btn" id="submitBtn">
-                Enviar mensagem <i class="fas fa-paper-plane"></i>
-              </button>
-            </form>
-          </div>
-        </div>
+    <div class="contact-layout">
+      <div class="fade-up">
+        <p class="contact-desc">Precisa de um app Android, automação de processo ou integração SQL? Me manda uma mensagem — respondo em menos de 24h.</p>
       </div>
-    </section>
+
+      <div class="unified-card fade-up delay-1">
+
+        <div class="uc-top">
+          <div class="cp-avatar">FS</div>
+          <div>
+            <div class="cp-name">Felipe Santos</div>
+            <div class="cp-role mono">Android Developer &amp; Analista de Sistemas</div>
+          </div>
+          <span class="pc-badge mono">● disponível</span>
+        </div>
+
+        <div class="uc-links">
+          <a href="https://wa.me/5541984084116" target="_blank" class="uc-link">
+            <span class="uc-link-icon"><i class="fab fa-whatsapp"></i></span>
+            <span class="uc-link-label mono">WhatsApp</span>
+            <span class="uc-link-val">41 98408-4116</span>
+          </a>
+          <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="uc-link">
+            <span class="uc-link-icon"><i class="fab fa-linkedin-in"></i></span>
+            <span class="uc-link-label mono">LinkedIn</span>
+            <span class="uc-link-val">felipe-santos-tech</span>
+          </a>
+          <a href="https://github.com/felipe-santos-tech" target="_blank" class="uc-link">
+            <span class="uc-link-icon"><i class="fab fa-github"></i></span>
+            <span class="uc-link-label mono">GitHub</span>
+            <span class="uc-link-val">@felipe-santos-tech</span>
+          </a>
+        </div>
+
+        <form id="cform" class="uc-body">
+          <div class="form-2col">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name">Nome completo</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email">E-mail</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <select id="servico" name="servico" required>
+              <option value="" disabled selected></option>
+              <option value="Desenvolvimento Android">📱 Desenvolvimento Android</option>
+              <option value="Automação de Processos">⚙️ Automação de Processos</option>
+              <option value="SQL / Banco de Dados">🗄️ SQL / Banco de Dados</option>
+              <option value="Consultoria ERP">🏭 Consultoria ERP</option>
+              <option value="Outros">👀 Outros assuntos</option>
+            </select>
+            <label for="servico">Tipo de serviço</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="3" required placeholder=" "></textarea>
+            <label for="message">Sua mensagem</label>
+          </div>
+        </form>
+
+        <div class="uc-footer">
+          <div class="uc-footer-note mono">
+            <span class="status-dot"></span> Resposta em menos de 24h
+          </div>
+          <button type="submit" form="cform" class="submit-btn" id="submitBtn">
+            Enviar mensagem <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- FOOTER -->
     <footer>
@@ -566,6 +564,7 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
