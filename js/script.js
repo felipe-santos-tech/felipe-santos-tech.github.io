@@ -3,18 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('cform');
   const submitBtn = document.querySelector('.btn-submit');
 
-  // Scroll: mostrar botão topo
+  // Botão topo
   window.addEventListener('scroll', () => {
-    if (topbtn) {
-      topbtn.classList.toggle('show', window.scrollY > 400);
-    }
+    if (topbtn) topbtn.classList.toggle('show', window.scrollY > 400);
   });
-
-  // Botão voltar ao topo
   if (topbtn) {
-    topbtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    topbtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
   // Navegação suave
@@ -30,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Reveal nas seções
+  // Animação de revelar
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -39,16 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }, { threshold: 0.1 });
-
-  document.querySelectorAll('.rv, .about-grid, .stack-grid, .project-card, .contact-wrapper').forEach(el => {
+  document.querySelectorAll('.about-grid, .stack-grid, .project-card, .contact-wrapper').forEach(el => {
     el.classList.add('rv');
     observer.observe(el);
   });
-
-  // Estilo base para reveal (adicionei no CSS inline? melhor garantir)
-  const styleRV = document.createElement('style');
-  styleRV.textContent = `.rv { opacity: 0; transform: translateY(20px); transition: all 0.5s ease; } .rv.in { opacity: 1; transform: translateY(0); }`;
-  document.head.appendChild(styleRV);
+  // CSS para o efeito
+  const style = document.createElement('style');
+  style.textContent = '.rv { opacity: 0; transform: translateY(20px); transition: all 0.5s ease; } .rv.in { opacity: 1; transform: translateY(0); }';
+  document.head.appendChild(style);
 
   // Formulário WhatsApp
   if (form) {
