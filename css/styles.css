@@ -813,3 +813,45 @@ footer {
   .uc-link    { border-right: none; border-bottom: 1px solid var(--bdr); }
   .uc-link:last-child { border-bottom: none; }
 }
+/* ═══════════════════════════════════════
+   CAPTCHA WEB3FORMS / HCAPTCHA
+   ═══════════════════════════════════════ */
+
+.captcha-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg2);
+  border: 1px solid var(--bdr2);
+  border-radius: var(--rsm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  overflow: hidden;
+}
+
+.captcha-box .h-captcha {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.captcha-help {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .captcha-box {
+    padding: 0.85rem;
+  }
+
+  .captcha-box iframe {
+    transform: scale(0.86);
+    transform-origin: left top;
+  }
+}

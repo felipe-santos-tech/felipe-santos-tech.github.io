@@ -507,26 +507,30 @@
     <!-- ══════ CONTATO ══════ -->
 <section id="contato" class="section">
   <div class="container">
-   <div class="section-header">
-  <span class="sh-num mono">// 05</span>
-  <h2 class="sh-title">Vamos ter uma conversa?</h2>
-  <p class="sh-desc">Precisa de um app Android, automação de processo ou integração SQL?<br>Me manda uma mensagem — respondo em menos de 24h.</p>
-</div>
 
-<div class="contact-layout">
+    <div class="section-header">
+      <span class="sh-num mono">// 05</span>
+      <h2 class="sh-title">Vamos ter uma conversa?</h2>
+      <p class="sh-desc">
+        Precisa de um app Android, automação de processo ou integração SQL?<br>
+        Me manda uma mensagem — respondo em menos de 24h.
+      </p>
+    </div>
 
-  <div></div>  <!-- coluna vazia pra manter o grid alinhado -->
+    <div class="contact-layout">
 
-  <div class="unified-card fade-up">
+      <div></div>
 
-      <div class="unified-card fade-up delay-1">
+      <div class="unified-card fade-up">
 
         <div class="uc-top">
           <div class="cp-avatar">FS</div>
+
           <div>
             <div class="cp-name">Felipe Santos</div>
-            <div class="cp-role mono">Android Developer &amp; Analista de Sistemas</div>
+            <div class="cp-role mono">Android Developer &amp; Software Developer</div>
           </div>
+
           <span class="pc-badge mono">● disponível</span>
         </div>
 
@@ -536,11 +540,13 @@
             <span class="uc-link-label mono">WhatsApp</span>
             <span class="uc-link-val">41 98408-4116</span>
           </a>
+
           <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank" class="uc-link">
             <span class="uc-link-icon"><i class="fab fa-linkedin-in"></i></span>
             <span class="uc-link-label mono">LinkedIn</span>
             <span class="uc-link-val">felipe-santos-tech</span>
           </a>
+
           <a href="https://github.com/felipe-santos-tech" target="_blank" class="uc-link">
             <span class="uc-link-icon"><i class="fab fa-github"></i></span>
             <span class="uc-link-label mono">GitHub</span>
@@ -549,16 +555,22 @@
         </div>
 
         <form id="cform" class="uc-body">
+
+          <input type="hidden" name="access_key" value="9fc1f0ed-f1ec-47ac-97fe-a08c6ad082c9">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
           <div class="form-2col">
             <div class="form-group">
               <input type="text" id="name" name="name" required placeholder=" ">
               <label for="name">Nome completo</label>
             </div>
+
             <div class="form-group">
               <input type="email" id="email" name="email" required placeholder=" ">
               <label for="email">E-mail</label>
             </div>
           </div>
+
           <div class="form-group">
             <select id="servico" name="servico" required>
               <option value="" disabled selected></option>
@@ -570,16 +582,26 @@
             </select>
             <label for="servico">Tipo de serviço</label>
           </div>
+
           <div class="form-group">
             <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
             <label for="message">Sua mensagem</label>
           </div>
+
+          <div class="captcha-box">
+            <div class="h-captcha" data-captcha="true"></div>
+            <small class="captcha-help">
+              Confirme que você não é um robô antes de enviar.
+            </small>
+          </div>
+
         </form>
 
         <div class="uc-footer">
           <div class="uc-footer-note mono">
             <span class="status-dot"></span> Resposta em menos de 24h
           </div>
+
           <button type="submit" form="cform" class="submit-btn" id="submitBtn">
             Enviar mensagem <i class="fas fa-paper-plane"></i>
           </button>
@@ -612,12 +634,13 @@
 
   </main>
 
-  <!-- BACK TO TOP -->
-  <button id="topBtn" class="top-btn" title="Voltar ao topo">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+<!-- BACK TO TOP -->
+<button id="topBtn" class="top-btn" title="Voltar ao topo">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script src="js/script.js"></script>
 </body>
 </html>
