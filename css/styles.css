@@ -855,3 +855,32 @@ footer {
     transform-origin: left top;
   }
 }
+
+.pc-avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ff8c00;
+}
+
+.pc-avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Avatar circular com borda laranja para o card de perfil do cabeçalho*/
+.cp-avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ff8c00;
+}
+/* Avatar circular com borda laranja para o card de perfil do rodapé */
+.cp-avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
