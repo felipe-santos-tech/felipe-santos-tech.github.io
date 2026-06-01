@@ -255,5 +255,80 @@ form?.addEventListener('submit', async (e) => {
   }
 });
 
+/* ========== ADD: MENU HAMBÚRGUER MOBILE ========== */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+const closeMobileNav = document.getElementById('closeMobileNav');
+const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+function openMobileMenu() {
+  mobileNav.classList.add('open');
+  mobileNavOverlay.classList.add('open');
+  hamburger.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  mobileNav.classList.remove('open');
+  mobileNavOverlay.classList.remove('open');
+  hamburger.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Abrir ao clicar no hambúrguer
+hamburger?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (mobileNav.classList.contains('open')) {
+    closeMobileMenu();
+  } else {
+    openMobileMenu();
+  }
+});
+
+// Fechar ao clicar no overlay
+mobileNavOverlay?.addEventListener('click', closeMobileMenu);
+
+// Fechar ao clicar no botão X
+closeMobileNav?.addEventListener('click', closeMobileMenu);
+
+// Fechar ao clicar em qualquer link do menu mobile
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeMobileMenu();
+  });
+});
+
+// Fechar ao redimensionar para desktop (se o menu estiver aberto e a tela ficar >640px)
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 640 && mobileNav.classList.contains('open')) {
+    closeMobileMenu();
+  }
+});
+
+// Sincronizar o link ativo também no menu mobile
+function setActiveMobileNav() {
+  let current = '';
+  const offset = window.innerHeight * 0.4;
+
+  sections.forEach(sec => {
+    if (window.scrollY >= sec.offsetTop - offset) {
+      current = sec.id;
+    }
+  });
+
+  mobileLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.section === current);
+  });
+}
+
+// Adicionar a função ao evento scroll (já existe setActiveNav, então podemos chamar ambas)
+window.addEventListener('scroll', () => {
+  setActiveNav();     // já existente
+  setActiveMobileNav();
+});
+setActiveMobileNav(); // chamada inicial
+/* ========== FIM ADD ========== */
+
 // ── NAV MOBILE: highlight no mobile ──
 // A nav lateral some em mobile, mas o scroll listener fica ativo para quando estiver visível.

@@ -25,6 +25,30 @@
     <i class="fas fa-moon" id="icon-moon"></i>
   </button>
 
+<!-- ========== ADD: MENU HAMBÚRGUER MOBILE ========== -->
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <span class="brand-mark">FS</span>
+      <button class="close-mobile-nav" id="closeMobileNav">&times;</button>
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="#home" class="mobile-nav-link" data-section="home">01. início</a></li>
+      <li><a href="#sobre" class="mobile-nav-link" data-section="sobre">02. sobre</a></li>
+      <li><a href="#stack" class="mobile-nav-link" data-section="stack">03. stack</a></li>
+      <li><a href="#projetos" class="mobile-nav-link" data-section="projetos">04. projetos</a></li>
+      <li><a href="#contato" class="mobile-nav-link" data-section="contato">05. contato</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <span class="status-dot"></span> disponível
+    </div>
+  </nav>
+  <!-- ========== FIM ADD ========== -->
+
   <!-- NAV LATERAL -->
   <nav class="side-nav" id="sideNav">
     <div class="nav-brand">
@@ -143,10 +167,14 @@
                   <span class="ps-num">7+</span>
                   <span class="ps-label mono">apps</span>
                 </div>
+
+                <!-- PARA ADICIONAR MAIS ESTATÍSTICAS: copie o bloco "pc-stat" abaixo e cole aqui dentro. -->
                 <div class="pc-sep"></div>
                 <div class="pc-stat">
                   <span class="ps-num">40%</span>
                   <span class="ps-label mono">+ produtividade</span>
+
+
                 </div>
                 <div class="pc-sep"></div>
                 <div class="pc-stat">
@@ -396,9 +424,10 @@
         <p class="pf-desc">App Android para gestão de checklists de entrada/saída de veículos com login, captura de fotos, assinatura digital, medição de combustível e integração em tempo real com SQL Server e ERP corporativo.</p>
 
         <!-- Métricas de impacto -->
+        
         <div class="pf-results">
           <div class="pfr-item">
-            <span class="pfr-n">↑40%</span>
+            <span class="pfr-n">↑60%</span>
             <span class="pfr-l mono">produtividade</span>
           </div>
           <div class="pfr-item">
@@ -469,7 +498,7 @@
           <p>Desenvolvimento pensando para dispositivo android que tem o propósito de controlar o estoque de forma eficiente e com função de inventario ciclico.</p>
           <div class="proj-metrics">
             <!-- <span class="pm">↑ 40% agilidade</span> --> <!-- tag comentada é o valor do card -->
-            <span class="pm">✓ Resultado = 30% redução de erros de estoque.</span>
+            <span class="pm">✓ Resultado = Redução de erros de estoque.</span>
             <!-- PARA ADICIONAR MÉTRICA: <span class="pm">texto</span> -->
           </div>
           <div class="proj-tags">
@@ -519,7 +548,6 @@
           </div>
           <div class="proj-tags">
             <span class="ptag">SQL Server</span>
-            <span class="ptag">Java</span>
             <span class="ptag">Delphi</span>
           </div>
           <!-- Sem link pois está em andamento -->
