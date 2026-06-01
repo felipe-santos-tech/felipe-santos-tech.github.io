@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════
    FELIPE SANTOS — Portfolio
-   Tema: Dark/Light · Laranja Âmbar
+   Tema: Dark/Light · Azul Tech
    Fontes: Plus Jakarta Sans + Space Mono
    ═══════════════════════════════════════ */
 
@@ -17,18 +17,18 @@
   --muted:     #4a5870;
   --muted2:    #7a90b0;
 
-  --accent:    #f97316;
-  --accent2:   #fb923c;
-  --accent3:   #fdba74;
-  --aglow:     rgba(249,115,22,0.15);
-  --aglow2:    rgba(249,115,22,0.08);
+  --accent:    #3b82f6;
+  --accent2:   #38bdf8;
+  --accent3:   #93c5fd;
+  --aglow:     rgba(59,130,246,0.15);
+  --aglow2:    rgba(59,130,246,0.08);
 
-  --bdr:       rgba(249,115,22,0.08);
-  --bdr2:      rgba(249,115,22,0.18);
-  --bdr3:      rgba(249,115,22,0.35);
+  --bdr:       rgba(59,130,246,0.08);
+  --bdr2:      rgba(59,130,246,0.18);
+  --bdr3:      rgba(59,130,246,0.35);
 
   --shadow:    0 8px 40px rgba(0,0,0,0.6);
-  --glow:      0 0 40px rgba(249,115,22,0.08);
+  --glow:      0 0 40px rgba(59,130,246,0.08);
 
   --nav-w:     110px;
   --r:         12px;
@@ -56,15 +56,15 @@
   --muted:     #8a9ab5;
   --muted2:    #4a5870;
 
-  --accent:    #ea6c00;
-  --accent2:   #f97316;
-  --accent3:   #c2560a;
-  --aglow:     rgba(234,108,0,0.1);
-  --aglow2:    rgba(234,108,0,0.05);
+  --accent:    #2563eb;
+  --accent2:   #3b82f6;
+  --accent3:   #1d4ed8;
+  --aglow:     rgba(37,99,235,0.1);
+  --aglow2:    rgba(37,99,235,0.05);
 
-  --bdr:       rgba(234,108,0,0.12);
-  --bdr2:      rgba(234,108,0,0.22);
-  --bdr3:      rgba(234,108,0,0.4);
+  --bdr:       rgba(37,99,235,0.12);
+  --bdr2:      rgba(37,99,235,0.22);
+  --bdr3:      rgba(37,99,235,0.4);
 
   --shadow:    0 4px 24px rgba(0,0,0,0.08);
   --glow:      none;
@@ -105,7 +105,7 @@ img { display: block; width: 100%; height: 100%; object-fit: contain; }
 }
 .cursor-ring {
   width: 30px; height: 30px;
-  border: 1.5px solid rgba(249,115,22,0.5);
+  border: 1.5px solid rgba(59,130,246,0.5);
   border-radius: 50%;
   position: fixed; top: 0; left: 0;
   pointer-events: none; z-index: 9998;
@@ -181,7 +181,7 @@ img { display: block; width: 100%; height: 100%; object-fit: contain; }
   transition: var(--transition);
   position: relative;
 }
-/* barra laranja à esquerda no item ativo */
+/* barra azul à esquerda no item ativo */
 .nav-link::before {
   content: '';
   position: absolute; left: 0; top: 50%; transform: translateY(-50%);
@@ -615,7 +615,7 @@ img { display: block; width: 100%; height: 100%; object-fit: contain; }
   display: flex; align-items: center; gap: 1rem;
 }
 
-/* avatar circular com gradiente laranja */
+/* avatar circular com gradiente azul */
 .cp-avatar {
   width: 52px; height: 52px; border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -679,7 +679,7 @@ img { display: block; width: 100%; height: 100%; object-fit: contain; }
 }
 .form-group select {
   cursor: pointer;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f97316' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
   background-repeat: no-repeat; background-position: right 0.85rem center;
 }
 .form-group textarea { resize: vertical; min-height: 100px; }

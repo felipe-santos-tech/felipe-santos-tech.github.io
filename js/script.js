@@ -134,6 +134,10 @@ const submitBtn = document.getElementById('submitBtn');
 
 const whatsappNumber = '5541984084116';
 
+// Azul principal do site
+const alertPrimaryColor = '#3b82f6';
+const alertSecondaryColor = '#4a5870';
+
 form?.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -153,7 +157,7 @@ form?.addEventListener('submit', async (e) => {
       icon: 'warning',
       background: '#0e1420',
       color: '#e8f0ff',
-      confirmButtonColor: '#f97316'
+      confirmButtonColor: alertPrimaryColor
     });
 
     return;
@@ -193,8 +197,8 @@ form?.addEventListener('submit', async (e) => {
         background: '#0e1420',
         color: '#e8f0ff',
         showCancelButton: true,
-        confirmButtonColor: '#f97316',
-        cancelButtonColor: '#4a5870',
+        confirmButtonColor: alertPrimaryColor,
+        cancelButtonColor: alertSecondaryColor,
         confirmButtonText: 'Sim, abrir WhatsApp',
         cancelButtonText: 'Não, obrigado'
       });
@@ -225,7 +229,7 @@ form?.addEventListener('submit', async (e) => {
         icon: 'error',
         background: '#0e1420',
         color: '#e8f0ff',
-        confirmButtonColor: '#f97316'
+        confirmButtonColor: alertPrimaryColor
       });
 
       submitBtn.innerHTML = originalHTML;
@@ -243,7 +247,7 @@ form?.addEventListener('submit', async (e) => {
       icon: 'error',
       background: '#0e1420',
       color: '#e8f0ff',
-      confirmButtonColor: '#f97316'
+      confirmButtonColor: alertPrimaryColor
     });
 
     submitBtn.innerHTML = originalHTML;
@@ -255,80 +259,31 @@ form?.addEventListener('submit', async (e) => {
   }
 });
 
-/* ========== ADD: MENU HAMBÚRGUER MOBILE ========== */
+// ── MENU HAMBÚRGUER MOBILE ──
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
 const mobileNavOverlay = document.getElementById('mobileNavOverlay');
 const closeMobileNav = document.getElementById('closeMobileNav');
-const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
 function openMobileMenu() {
-  mobileNav.classList.add('open');
-  mobileNavOverlay.classList.add('open');
-  hamburger.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  hamburger?.classList.add('active');
+  mobileNav?.classList.add('active');
+  mobileNavOverlay?.classList.add('active');
+  document.body.classList.add('menu-open');
 }
 
 function closeMobileMenu() {
-  mobileNav.classList.remove('open');
-  mobileNavOverlay.classList.remove('open');
-  hamburger.classList.remove('active');
-  document.body.style.overflow = '';
+  hamburger?.classList.remove('active');
+  mobileNav?.classList.remove('active');
+  mobileNavOverlay?.classList.remove('active');
+  document.body.classList.remove('menu-open');
 }
 
-// Abrir ao clicar no hambúrguer
-hamburger?.addEventListener('click', (e) => {
-  e.stopPropagation();
-  if (mobileNav.classList.contains('open')) {
-    closeMobileMenu();
-  } else {
-    openMobileMenu();
-  }
-});
-
-// Fechar ao clicar no overlay
+hamburger?.addEventListener('click', openMobileMenu);
+closeMobileNav?.addEventListener('click', closeMobileMenu);
 mobileNavOverlay?.addEventListener('click', closeMobileMenu);
 
-// Fechar ao clicar no botão X
-closeMobileNav?.addEventListener('click', closeMobileMenu);
-
-// Fechar ao clicar em qualquer link do menu mobile
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    closeMobileMenu();
-  });
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
 });
-
-// Fechar ao redimensionar para desktop (se o menu estiver aberto e a tela ficar >640px)
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 640 && mobileNav.classList.contains('open')) {
-    closeMobileMenu();
-  }
-});
-
-// Sincronizar o link ativo também no menu mobile
-function setActiveMobileNav() {
-  let current = '';
-  const offset = window.innerHeight * 0.4;
-
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - offset) {
-      current = sec.id;
-    }
-  });
-
-  mobileLinks.forEach(link => {
-    link.classList.toggle('active', link.dataset.section === current);
-  });
-}
-
-// Adicionar a função ao evento scroll (já existe setActiveNav, então podemos chamar ambas)
-window.addEventListener('scroll', () => {
-  setActiveNav();     // já existente
-  setActiveMobileNav();
-});
-setActiveMobileNav(); // chamada inicial
-/* ========== FIM ADD ========== */
-
-// ── NAV MOBILE: highlight no mobile ──
-// A nav lateral some em mobile, mas o scroll listener fica ativo para quando estiver visível.
