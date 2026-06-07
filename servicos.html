@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Serviços de desenvolvimento — Felipe Santos. Sites, Apps Android, Automação, SQL. Curitiba/PR.">
+  <title>Serviços · Felipe Santos</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="servicos">
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <header class="topnav">
+    <div class="nav-brand mono">FS<span class="brand-dot">.</span></div>
+    <ul class="nav-menu">
+      <li><a href="index.html"    class="nav-link" data-page="home"><span class="nl-num">01.</span> início</a></li>
+      <li><a href="projetos.html" class="nav-link" data-page="projetos"><span class="nl-num">02.</span> projetos</a></li>
+      <li><a href="servicos.html" class="nav-link" data-page="servicos"><span class="nl-num">03.</span> serviços</a></li>
+      <li><a href="contato.html"  class="nav-link" data-page="contato"><span class="nl-num">04.</span> contato</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span class="mono">disponível</span>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+        <i class="fas fa-sun" id="icon-sun"></i>
+        <i class="fas fa-moon" id="icon-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <span class="nav-brand mono">FS<span class="brand-dot">.</span></span>
+      <button class="close-mobile-nav" id="closeMobileNav">&times;</button>
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="index.html"    class="mobile-nav-link" data-page="home">01. início</a></li>
+      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">02. projetos</a></li>
+      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">03. serviços</a></li>
+      <li><a href="contato.html"  class="mobile-nav-link" data-page="contato">04. contato</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <span class="status-dot"></span> disponível
+    </div>
+  </nav>
+  <main class="main">
+    <section id="servicos" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="sh-num mono">// serviços</span>
+          <h2 class="sh-title head">O que posso fazer por você</h2>
+          <p class="sh-desc">
+            Cada projeto é único. O valor é definido após entender o que você precisa —<br>
+            não antes. Projetos a partir de <span class="sh-price">R$ 800</span>.
+          </p>
+        </div>
+
+        <div class="srv-what-grid">
+          <div class="srv-card fade-up delay-1">
+            <div class="srv-icon">🌐</div>
+            <h3 class="head">Sites & Landing Pages</h3>
+            <p>Sites institucionais, portfólios e landing pages responsivos, com foco em conversão e presença digital profissional.</p>
+          </div>
+          <div class="srv-card fade-up delay-2">
+            <div class="srv-icon">📱</div>
+            <h3 class="head">Apps Android</h3>
+            <p>Aplicativos nativos integrados a ERPs, bancos de dados e APIs. Do checklist ao sistema de gestão completo.</p>
+          </div>
+          <div class="srv-card fade-up delay-3">
+            <div class="srv-icon">⚙️</div>
+            <h3 class="head">Automação de Processos</h3>
+            <p>Eliminação de retrabalho com scripts e rotinas automáticas. Menos erro manual, mais eficiência operacional.</p>
+          </div>
+          <div class="srv-card fade-up delay-1">
+            <div class="srv-icon">🗄️</div>
+            <h3 class="head">SQL & Dashboards</h3>
+            <p>Queries otimizadas, relatórios e painéis de dados que colocam a informação certa na mão de quem decide.</p>
+          </div>
+          <div class="srv-card fade-up delay-2">
+            <div class="srv-icon">🏭</div>
+            <h3 class="head">Integração com ERP</h3>
+            <p>Conexão entre sistemas, migração de dados e customizações dentro de plataformas como Protheus/TOTVS.</p>
+          </div>
+          <div class="srv-card fade-up delay-3">
+            <div class="srv-icon">📊</div>
+            <h3 class="head">Sistemas Web</h3>
+            <p>Sistemas sob medida para gestão interna, com banco de dados, autenticação e painel administrativo.</p>
+          </div>
+        </div>
+
+        <div class="srv-divider fade-up">
+          <span class="mono">como funciona</span>
+        </div>
+
+        <div class="how-grid">
+          <div class="how-step fade-up delay-1">
+            <div class="how-num mono">01</div>
+            <div class="how-content">
+              <h4 class="head">Me conta o projeto</h4>
+              <p>Manda uma mensagem pelo WhatsApp ou pelo formulário de contato. Pode ser uma ideia ainda no rascunho — sem problema.</p>
+            </div>
+            <div class="how-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+          <div class="how-step fade-up delay-2">
+            <div class="how-num mono">02</div>
+            <div class="how-content">
+              <h4 class="head">Briefing rápido</h4>
+              <p>Fazemos uma conversa de 15 minutos para entender escopo, prazo e necessidades. Sem compromisso, sem enrolação.</p>
+            </div>
+            <div class="how-arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+          <div class="how-step fade-up delay-3">
+            <div class="how-num mono">03</div>
+            <div class="how-content">
+              <h4 class="head">Proposta em 24h</h4>
+              <p>Envio uma proposta com escopo detalhado, prazo estimado e valor. Só começo após sua aprovação. Pagamento: 50% na aprovação · 50% na entrega.</p>
+            </div>
+            <div class="how-arrow how-arrow-hide"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="srv-cta fade-up">
+          <div class="srv-cta-inner">
+            <div class="srv-cta-text">
+              <span class="status-dot"></span>
+              <span class="mono">Disponível para novos projetos</span>
+            </div>
+            <a href="contato.html" class="btn-primary">Vamos conversar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">FS_</div>
+        <div class="footer-links">
+          <a href="index.html">início</a><a href="projetos.html">projetos</a><a href="servicos.html">serviços</a><a href="contato.html">contato</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/felipe-santos-tech" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/5541984084116" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR · Todos os direitos reservados</p>
+      </div>
+    </footer>
+  </main>
+
+  <button id="topBtn" class="top-btn" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+  <script src="js/script.js"></script>
+</body>
+</html>

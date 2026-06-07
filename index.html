@@ -3,710 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Felipe Santos — Software Developer, SQL Server, Automação. Curitiba/PR.">
+  <meta name="description" content="Felipe Santos — Software Developer, Android, SQL Server, Automação. Curitiba/PR.">
   <title>Felipe Santos · Software Developer</title>
-
   <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-
-  <!-- CURSOR -->
+<body data-page="home">
   <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div> 
+  <div class="cursor-ring" id="cursor-ring"></div>
 
-  <!-- THEME TOGGLE -->
-  <button class="theme-toggle" id="themeToggle" title="Alternar tema">
-    <i class="fas fa-sun" id="icon-sun"></i>
-    <i class="fas fa-moon" id="icon-moon"></i>
-  </button>
-
-<!-- ========== ADD: MENU HAMBÚRGUER MOBILE ========== -->
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <header class="topnav">
+    <div class="nav-brand mono">FS<span class="brand-dot">.</span></div>
+    <ul class="nav-menu">
+      <li><a href="index.html"    class="nav-link" data-page="home"><span class="nl-num">01.</span> início</a></li>
+      <li><a href="projetos.html" class="nav-link" data-page="projetos"><span class="nl-num">02.</span> projetos</a></li>
+      <li><a href="servicos.html" class="nav-link" data-page="servicos"><span class="nl-num">03.</span> serviços</a></li>
+      <li><a href="contato.html"  class="nav-link" data-page="contato"><span class="nl-num">04.</span> contato</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span class="mono">disponível</span>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+        <i class="fas fa-sun" id="icon-sun"></i>
+        <i class="fas fa-moon" id="icon-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
   <nav class="mobile-nav" id="mobileNav">
     <div class="mobile-nav-header">
-      <span class="brand-mark">FS</span>
+      <span class="nav-brand mono">FS<span class="brand-dot">.</span></span>
       <button class="close-mobile-nav" id="closeMobileNav">&times;</button>
     </div>
     <ul class="mobile-nav-menu">
-      <li><a href="#home" class="mobile-nav-link" data-section="home">01. início</a></li>
-      <li><a href="#sobre" class="mobile-nav-link" data-section="sobre">02. sobre</a></li>
-      <li><a href="#stack" class="mobile-nav-link" data-section="stack">03. stack</a></li>
-      <li><a href="#projetos" class="mobile-nav-link" data-section="projetos">04. projetos</a></li>
-      <li><a href="#contato" class="mobile-nav-link" data-section="contato">05. contato</a></li>
+      <li><a href="index.html"    class="mobile-nav-link" data-page="home">01. início</a></li>
+      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">02. projetos</a></li>
+      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">03. serviços</a></li>
+      <li><a href="contato.html"  class="mobile-nav-link" data-page="contato">04. contato</a></li>
     </ul>
     <div class="mobile-nav-footer">
       <span class="status-dot"></span> disponível
     </div>
   </nav>
-  <!-- ========== FIM ADD ========== -->
-
-  <!-- NAV LATERAL -->
-  <nav class="side-nav" id="sideNav">
-    <div class="nav-brand">
-      <span class="brand-mark">FS</span>
-      <span class="brand-dot">.</span>
-    </div>
-
-    <ul class="nav-menu">
-      <li>
-        <a href="#home" class="nav-link active" data-section="home">
-          <span class="nl-num">01</span>
-          <span class="nl-icon"><i class="fas fa-house"></i></span>
-          <span class="nl-label">início</span>
-        </a>
-      </li>
-      <li>
-        <a href="#sobre" class="nav-link" data-section="sobre">
-          <span class="nl-num">02</span>
-          <span class="nl-icon"><i class="fas fa-user"></i></span>
-          <span class="nl-label">sobre</span>
-        </a>
-      </li>
-      <li>
-        <a href="#stack" class="nav-link" data-section="stack">
-          <span class="nl-num">03</span>
-          <span class="nl-icon"><i class="fas fa-layer-group"></i></span>
-          <span class="nl-label">stack</span>
-        </a>
-      </li>
-      <li>
-        <a href="#projetos" class="nav-link" data-section="projetos">
-          <span class="nl-num">04</span>
-          <span class="nl-icon"><i class="fas fa-code-branch"></i></span>
-          <span class="nl-label">projetos</span>
-        </a>
-      </li>
-      <li>
-        <a href="#contato" class="nav-link" data-section="contato">
-          <span class="nl-num">05</span>
-          <span class="nl-icon"><i class="fas fa-paper-plane"></i></span>
-          <span class="nl-label">contato</span>
-        </a>
-      </li>
-    </ul>
-
-    <div class="nav-footer">
-      <span class="status-dot"></span>
-      <span class="status-label">disponível</span>
-    </div>
-  </nav>
-
-  <!-- CONTEÚDO -->
   <main class="main">
 
-    <!-- ══════ HOME ══════ -->
+    <!-- HOME -->
     <section id="home" class="section">
       <div class="container">
         <div class="home-layout">
-
           <div class="home-left">
             <div class="home-eyebrow">
               <span class="eyebrow-ping"></span>
               <span class="mono">Software Developer · Curitiba / PR</span>
             </div>
-
-            <h1 class="home-title">
+            <h1 class="home-title head">
               Software<br>
               <span class="title-accent">Developer</span><br>
               <span class="title-thin">&amp; Backend</span>
             </h1>
-
             <p class="home-desc">
               Construo apps Android nativos que integram ERPs, automatizo
               processos com Delphi e entrego dados precisos via SQL Server —
               soluções que <strong>funcionam no mundo real</strong>.
             </p>
-
             <div class="home-chips">
               <span class="chip"><i class="fab fa-android"></i> Android Native</span>
               <span class="chip"><i class="fas fa-database"></i> SQL Server</span>
               <span class="chip"><i class="fas fa-bolt"></i> Automação</span>
               <span class="chip"><i class="fas fa-plug"></i> ERP Integration</span>
             </div>
-
             <div class="home-actions">
-              <a href="#projetos" class="btn-primary">Ver projetos <i class="fas fa-arrow-right"></i></a>
-              <a href="#contato" class="btn-ghost">Contato</a>
+              <a href="projetos.html" class="btn-primary">Ver projetos <i class="fas fa-arrow-right"></i></a>
+              <a href="contato.html" class="btn-ghost">Contato</a>
             </div>
-
             <div class="home-socials">
               <a href="https://github.com/felipe-santos-tech" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
               <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
               <a href="https://wa.me/5541984084116" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-              <a href="https://felipe-santos-tech.github.io" target="_blank" title="Portfólio"><i class="fas fa-globe"></i></a>
             </div>
           </div>
-
           <div class="home-right">
-            <!-- Card de perfil -->
             <div class="profile-card fade-up">
               <div class="pc-top">
-       <!--         <div class="pc-avatar">FS</div>    -->
-                 <div class="pc-avatar">
-                    <img src="assets/profile/profile.webp" alt="Foto de perfil">
-                    
-                 </div>
+                <div class="pc-avatar">
+                  <img src="assets/profile/profile.webp" alt="Foto de perfil">
+                </div>
                 <div class="pc-info">
-                  <div class="pc-name">Felipe Santos</div>
+                  <div class="pc-name head">Felipe Santos</div>
                   <div class="pc-sub mono">Software Developer</div>
                 </div>
                 <span class="pc-badge mono">● disponível</span>
               </div>
               <div class="pc-divider"></div>
               <div class="pc-stats">
-                <div class="pc-stat">
-                  <span class="ps-num">7+</span>
-                  <span class="ps-label mono">apps</span>
-                </div>
-
-                <!-- PARA ADICIONAR MAIS ESTATÍSTICAS: copie o bloco "pc-stat" abaixo e cole aqui dentro. -->
+                <div class="pc-stat"><span class="ps-num">7+</span><span class="ps-label mono">apps</span></div>
                 <div class="pc-sep"></div>
-                <div class="pc-stat">
-                  <span class="ps-num">40%</span>
-                  <span class="ps-label mono">+ produtividade</span>
-
-
-                </div>
+                <div class="pc-stat"><span class="ps-num">40%</span><span class="ps-label mono">+ produtividade</span></div>
                 <div class="pc-sep"></div>
-                <div class="pc-stat">
-                  <span class="ps-num">8+</span>
-                  <span class="ps-label mono">tecnologias</span>
-                </div>
+                <div class="pc-stat"><span class="ps-num">8+</span><span class="ps-label mono">tecnologias</span></div>
               </div>
               <div class="pc-divider"></div>
               <div class="pc-status-list">
-                <div class="pc-status-item">
-                  <span class="psi-dot green"></span>
-                  <span class="mono">Software Developer</span>
-                </div>
-                <div class="pc-status-item">
-                  <span class="psi-dot green"></span>
-                  <span class="mono">Aberto a freelance</span>
-                </div>
-                <div class="pc-status-item">
-                  <span class="psi-dot amber"></span>
-                  <span class="mono">Implementação de ERP em andamento</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Terminal card -->
-             <!-- quadro de terminal removido para dar destaque aos projetos, mas pode ser reativado se quiser um toque geek na home. Basta descomentar o bloco abaixo e ajustar o conteúdo conforme desejar. 
-            <div class="terminal-card fade-up delay-1">
-              <div class="tc-bar">
-                <span class="tc-dot r"></span>
-                <span class="tc-dot y"></span>
-                <span class="tc-dot g"></span>
-                <span class="tc-title mono">felipe@dev ~ bash</span>
-              </div>
-              <div class="tc-body mono">
-                <div class="tc-line"><span class="tc-prompt">$</span> whoami</div>
-                <div class="tc-line tc-out">felipe.santos — Software Developer</div>
-                <div class="tc-line"><span class="tc-prompt">$</span> cat stack.txt</div>
-                <div class="tc-line tc-out">▸ Java · Android SDK · SQL Server</div>
-                <div class="tc-line tc-out">▸ Delphi · Git · REST/JSON</div>
-                <div class="tc-line"><span class="tc-prompt">$</span> git status</div>
-                <div class="tc-line tc-ok">✓ ready for new challenges<span class="tc-cursor">_</span></div>
+                <div class="pc-status-item"><span class="psi-dot green"></span><span class="mono">Software Developer</span></div>
+                <div class="pc-status-item"><span class="psi-dot green"></span><span class="mono">Aberto a freelance</span></div>
+                <div class="pc-status-item"><span class="psi-dot amber"></span><span class="mono">Implementação de ERP em andamento</span></div>
               </div>
             </div>
           </div>
--->
         </div>
       </div>
     </section>
 
-    <!-- ══════ SOBRE ══════ -->
+    <!-- SOBRE -->
     <section id="sobre" class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <span class="sh-num mono">••••</span>
-          <h2 class="sh-title">Um resumo sobre mim</h2>
+          <span class="sh-num mono">// sobre</span>
+          <h2 class="sh-title head">Um resumo sobre mim</h2>
         </div>
-
         <div class="sobre-layout">
           <div class="sobre-text fade-up">
             <p>Tenho <strong>23 anos</strong> e atuo como <strong>Software Developer</strong>, estudante de <strong>Engenharia de Software</strong>. Minha trajetória começou no final de 2024 quando fui desafiado a criar um app de checklist digital para manutenção preventiva — e aquilo mudou tudo.</p>
             <p>Hoje construo soluções que <strong>resolvem problemas reais dentro das empresas</strong>: apps Android que falam com ERPs, automações que eliminam retrabalho e queries SQL que colocam os dados certos na mão de quem decide.</p>
             <p>Sempre aberto a novos desafios e oportunidades. 🚀</p>
           </div>
-
           <div class="sobre-cards">
             <div class="about-card fade-up delay-1">
               <div class="ac-icon">📱</div>
-              <h3>Mobile First</h3>
-              <p>Apps Android nativos integrados a ERPs corporativos, com assinatura digital, câmera e sync em tempo real.</p>
+              <div><h3>Mobile First</h3><p>Apps Android nativos integrados a ERPs corporativos, com assinatura digital, câmera e sync em tempo real.</p></div>
             </div>
             <div class="about-card fade-up delay-2">
               <div class="ac-icon">🗄️</div>
-              <h3>SQL & Dados</h3>
-              <p>SQL Server, T-SQL, queries dinâmicas e modelagem que entregam informações estratégicas com precisão.</p>
+              <div><h3>SQL & Dados</h3><p>SQL Server, T-SQL, queries dinâmicas e modelagem que entregam informações estratégicas com precisão.</p></div>
             </div>
             <div class="about-card fade-up delay-3">
               <div class="ac-icon">⚡</div>
-              <h3>Automação</h3>
-              <p>Processos automatizados com Delphi — menos erro manual, mais eficiência, relatórios e exportação XLSX.</p>
+              <div><h3>Automação</h3><p>Processos automatizados com Delphi — menos erro manual, mais eficiência, relatórios e exportação XLSX.</p></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════ STACK ══════ -->
+    <!-- STACK -->
     <section id="stack" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="sh-num mono">••••</span>
-          <h2 class="sh-title">Stack técnica</h2>
+          <span class="sh-num mono">// stack</span>
+          <h2 class="sh-title head">Stack técnica</h2>
         </div>
-
-        <div class="stack-layout">
-
-          <div class="stack-group fade-up">
-            <div class="sg-header">
-              <i class="fab fa-android sg-icon"></i>
-              <span class="sg-title">Mobile</span>
-            </div>
-            <div class="sg-items">
-              <div class="sg-item main">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
-                <div>
-                  <div class="si-name">Java</div>
-                  <div class="si-desc mono">linguagem principal · Android SDK</div>
-                </div>
-                <span class="si-tag">principal</span>
-              </div>
-              <div class="sg-item main">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" alt="Android">
-                <div>
-                  <div class="si-name">Android Native</div>
-                  <div class="si-desc mono">activities · fragments · REST</div>
-                </div>
-                <span class="si-tag">principal</span>
-              </div>
-              <div class="sg-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">
-                <div>
-                  <div class="si-name">Android Studio</div>
-                  <div class="si-desc mono">IDE · Gradle · debug</div>
-                </div>
-              </div>
-              <div class="sg-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite">
-                <div>
-                  <div class="si-name">SQLite / Room</div>
-                  <div class="si-desc mono">armazenamento offline no device</div>
-                </div>
-              </div>
+        <div class="stack-badges fade-up">
+          <div class="sb-group">
+            <span class="sb-label mono">Mobile</span>
+            <div class="sb-tags">
+              <span class="sb-tag main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"> Java</span>
+              <span class="sb-tag main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" alt="Android"> Android Native</span>
+              <span class="sb-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Studio"> Android Studio</span>
+              <span class="sb-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"> SQLite / Room</span>
             </div>
           </div>
-
-          <div class="stack-group fade-up delay-1">
-            <div class="sg-header">
-              <i class="fas fa-database sg-icon"></i>
-              <span class="sg-title">Banco de Dados</span>
-            </div>
-            <div class="sg-items">
-              <div class="sg-item main">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server">
-                <div>
-                  <div class="si-name">SQL Server / SSMS</div>
-                  <div class="si-desc mono">T-SQL · procedures · integração ERP</div>
-                </div>
-                <span class="si-tag">principal</span>
-              </div>
-              <div class="sg-item">
-                <span class="si-emoji">🔗</span>
-                <div>
-                  <div class="si-name">Queries Dinâmicas</div>
-                  <div class="si-desc mono">filtros · relatórios · modelagem</div>
-                </div>
-              </div>
+          <div class="sb-group">
+            <span class="sb-label mono">Banco de Dados</span>
+            <div class="sb-tags">
+              <span class="sb-tag main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL"> SQL Server / SSMS</span>
+              <span class="sb-tag">🔗 Queries Dinâmicas</span>
             </div>
           </div>
-
-          <div class="stack-group fade-up delay-2">
-            <div class="sg-header">
-              <i class="fas fa-cogs sg-icon"></i>
-              <span class="sg-title">Automação & Desktop</span>
-            </div>
-            <div class="sg-items">
-              <div class="sg-item main">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/delphi/delphi-original.svg" alt="Delphi">
-                <div>
-                  <div class="si-name">Delphi</div>
-                  <div class="si-desc mono">automações · ERP · processos batch</div>
-                </div>
-                <span class="si-tag">principal</span>
-              </div>
-              <div class="sg-item">
-                <span class="si-emoji">📊</span>
-                <div>
-                  <div class="si-name">Fast Report</div>
-                  <div class="si-desc mono">geração de relatórios PDF</div>
-                </div>
-              </div>
-              <div class="sg-item">
-                <span class="si-emoji">📄</span>
-                <div>
-                  <div class="si-name">SheetJS / XLSX</div>
-                  <div class="si-desc mono">exportação de planilhas</div>
-                </div>
-              </div>
+          <div class="sb-group">
+            <span class="sb-label mono">Automação & Desktop</span>
+            <div class="sb-tags">
+              <span class="sb-tag main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/delphi/delphi-original.svg" alt="Delphi"> Delphi</span>
+              <span class="sb-tag">📊 Fast Report</span>
+              <span class="sb-tag">📄 SheetJS / XLSX</span>
             </div>
           </div>
-
-          <div class="stack-group fade-up delay-3">
-            <div class="sg-header">
-              <i class="fas fa-tools sg-icon"></i>
-              <span class="sg-title">Ferramentas & Web</span>
-            </div>
-            <div class="sg-items">
-              <div class="sg-item main">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
-                <div>
-                  <div class="si-name">Git / GitHub</div>
-                  <div class="si-desc mono">versionamento · branches · PRs</div>
-                </div>
-                <span class="si-tag">principal</span>
-              </div>
-              <div class="sg-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
-                <div>
-                  <div class="si-name">HTML5 / CSS3</div>
-                  <div class="si-desc mono">estrutura e estilo web</div>
-                </div>
-              </div>
-              <div class="sg-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS">
-                <div>
-                  <div class="si-name">JavaScript</div>
-                  <div class="si-desc mono">scripts e interatividade</div>
-                </div>
-              </div>
+          <div class="sb-group">
+            <span class="sb-label mono">Ferramentas & Web</span>
+            <div class="sb-tags">
+              <span class="sb-tag main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"> Git / GitHub</span>
+              <span class="sb-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"> HTML5 / CSS3</span>
+              <span class="sb-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS"> JavaScript</span>
             </div>
           </div>
-
+        </div>
+        <div class="stack-cta fade-up">
+          <a href="projetos.html" class="btn-ghost">Ver projetos com essa stack <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </section>
 
-   <!-- ══════ PROJETOS ══════ -->
-<section id="projetos" class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <span class="sh-num mono">••••</span>
-      <h2 class="sh-title">Projetos em destaque</h2>
-    </div>
-
-    <div class="projetos-layout">
-
-      <!-- ─────────────────────────────────────────
-           CARD DESTAQUE (apenas 1, fica à esquerda)
-           Para trocar: edite os campos abaixo.
-      ────────────────────────────────────────── -->
-      <div class="proj-featured fade-up">
-        <div class="pf-badge">⭐ Destaque</div>
-
-        <!-- Emoji do projeto -->
-        <div class="pf-icon">🚛</div>
-
-        <!-- Título e descrição -->
-        <h3 class="pf-title">Checklist Digital de Veículos</h3>
-        <p class="pf-desc">App Android para gestão de checklists de entrada/saída de veículos com login, captura de fotos, assinatura digital, medição de combustível e integração em tempo real com SQL Server e ERP corporativo.</p>
-
-        <!-- Métricas de impacto -->
-        
-        <div class="pf-results">
-          <div class="pfr-item">
-            <span class="pfr-n">↑60%</span>
-            <span class="pfr-l mono">produtividade</span>
-          </div>
-          <div class="pfr-item">
-            <span class="pfr-n">↓30%</span>
-            <span class="pfr-l mono">erros manuais</span>
-          </div>
-          <!-- PARA ADICIONAR MAIS MÉTRICAS: copie o bloco abaixo
-          <div class="pfr-item">
-            <span class="pfr-n">↑X%</span>
-            <span class="pfr-l mono">descrição</span>
-          </div>
-          -->
-        </div>
-
-        <!-- Tags de tecnologia -->
-        <div class="proj-tags">
-          <span class="ptag">Java</span>
-          <span class="ptag">Android Studio</span>
-          <span class="ptag">SQL Server</span>
-          <span class="ptag">Delphi</span>
-          <span class="ptag">Fast Report</span>
-          <!-- PARA ADICIONAR TAG: <span class="ptag">Nome</span> -->
-        </div>
-
-        <!-- Link do repositório (remova se não tiver) -->
-        <a href="https://github.com/felipe-santos-tech/App-Checklist-Integrado-com-banco-de-dados" target="_blank" class="proj-link mono">
-          <i class="fab fa-github"></i> Ver repositório <i class="fas fa-arrow-right"></i>
-        </a>
-           <div class="proj-grid"></div>
-      </div>
-
-
-      <!-- ─────────────────────────────────────────
-           GRID DE CARDS (ficam à direita, em coluna)
-           Máximo recomendado: 3 cards.
-           PARA ADICIONAR UM CARD NORMAL: copie o
-           bloco "proj-card" abaixo e cole aqui dentro.
-      ────────────────────────────────────────── -->
-
-
-        <!-- ── CARD NORMAL ──────────────────────────
-             Copie este bloco inteiro para adicionar
-             um novo projeto simples.
-        ─────────────────────────────────────────── -->
-        <div class="proj-card fade-up delay-1">
-          <div class="proj-card-icon">🦺</div>
-          <h3>Controle de EPI & SESMT</h3>
-          <p>App Android para entrega e controle de EPIs conforme NR-6, com assinatura digital e rastreabilidade completa por colaborador.</p>
-          <div class="proj-metrics">
-            <span class="pm">↑ 40% agilidade</span>
-            <span class="pm">✓ NR-6</span>
-            <!-- PARA ADICIONAR MÉTRICA: <span class="pm">texto</span> -->
-          </div>
-          <div class="proj-tags">
-            <span class="ptag">Java</span>
-            <span class="ptag">SQL Server</span>
-            <span class="ptag">SQLite</span>
-          </div>
-          <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="proj-link mono">
-            <i class="fab fa-github"></i> Repositório <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-        <!-- ── FIM CARD NORMAL ── -->
-
-                <div class="proj-card fade-up delay-1">
-          <div class="proj-card-icon">📦</div>
-          <h3>Controle de estoque</h3>
-          <p>Desenvolvimento pensando para dispositivo android que tem o propósito de controlar o estoque de forma eficiente e com função de inventario ciclico.</p>
-          <div class="proj-metrics">
-            <!-- <span class="pm">↑ 40% agilidade</span> --> <!-- tag comentada é o valor do card -->
-            <span class="pm">✓ Resultado = Redução de erros de estoque.</span>
-            <!-- PARA ADICIONAR MÉTRICA: <span class="pm">texto</span> -->
-          </div>
-          <div class="proj-tags">
-            <span class="ptag">Java</span>
-            <span class="ptag">SQL Server</span>
-            <span class="ptag">SQLite</span>
-          </div>
-          <!--      <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="proj-link mono">
-            <i class="fab fa-github"></i> Repositório <i class="fas fa-arrow-right"></i>     -->
-          </a>
-        </div>
-        <!-- ── FIM CARD NORMAL ── -->
-
-          <div class="proj-card fade-up delay-1">
-          <div class="proj-card-icon">📊</div>
-          <h3>Elaboração de Dashboards</h3>
-          <p>Dashboards interativos para análise de dados e visualização de métricas de desempenho.</p>
-          <div class="proj-metrics">
-            <span class="pm">↑ Melhora na visualização de dados</span>
-            
-            <!-- PARA ADICIONAR MÉTRICA: <span class="pm">texto</span> -->
-          </div>
-          <div class="proj-tags">
-            <span class="ptag">Java</span>
-            <span class="ptag">SQL Server</span>
-            <span class="ptag">SQLite</span>
-          </div>
-          <!--     <a href="https://github.com/felipe-santos-tech/App-SESMT-EPI-Demo" target="_blank" class="proj-link mono">    
-            <i class="fab fa-github"></i> Repositório <i class="fas fa-arrow-right"></i>   -->
-          </a>                   
-        </div>
-        <!-- ── FIM CARD NORMAL ── -->
-
-
-        <!-- ── CARD EM ANDAMENTO ────────────────────
-             Use quando o projeto ainda está sendo feito.
-             Diferença: tem a classe "wip" e o wip-badge.
-             Copie este bloco para adicionar outro WIP.
-        ─────────────────────────────────────────── -->
-        <div class="proj-card wip fade-up delay-2">
-          <div class="proj-card-icon">🏭</div>
-          <span class="wip-badge mono">🔄 em andamento</span>
-          <h3>Modernização de ERP Industrial</h3>
-          <p>Reestruturação e implantação de ERP industrial com análise AS-IS/TO-BE, governança de dados e sprints de migração.</p>
-          <div class="proj-metrics">
-            <span class="pm muted">Jan/2026 — atual</span>
-          </div>
-          <div class="proj-tags">
-            <span class="ptag">SQL Server</span>
-            <span class="ptag">Delphi</span>
-          </div>
-          <!-- Sem link pois está em andamento -->
-        </div>
-        <!-- ── FIM CARD EM ANDAMENTO ── -->
-
-
-        <!-- ── CARD DE LISTA (experiência/skills) ───
-             Use para listar habilidades ou experiências.
-             Diferença: tem a classe "xp" e usa <ul>.
-             Geralmente é o último card — não duplicar.
-        ─────────────────────────────────────────── -->
-        <div class="proj-card xp fade-up delay-3">
-          <div class="proj-card-icon">💡</div>
-          <h3>Experiência Técnica</h3>
-          <ul class="xp-list">
-            <li>Filtros SQL dinâmicos e queries otimizadas</li>
-            <li>Integração Android ↔ ERP via REST/JSON</li>
-            <li>Canvas API para assinaturas digitais</li>
-            <li>Automação Delphi com exportação XLSX</li>
-            <li>Relatórios Fast Report e documentação LaTeX</li>
-            <!-- PARA ADICIONAR ITEM: <li>texto</li> -->
-          </ul>
-        </div>
-        <!-- ── FIM CARD DE LISTA ── -->
-
-      </div>
-      <!-- ── FIM PROJ-GRID ── -->
-
-    </div>
-  </div>
-</section>
-
-    <!-- ══════ CONTATO ══════ -->
-<section id="contato" class="section">
-  <div class="container">
-
-    <div class="section-header">
-      <span class="sh-num mono">••••</span>
-      <h2 class="sh-title">Vamos ter uma conversa?</h2>
-      <p class="sh-desc">
-        Precisa de um app Android, automação de processo ou integração SQL?<br>
-        Me manda uma mensagem — respondo em menos de 24h.
-      </p>
-    </div>
-
-    <div class="contact-layout">
-
-      <div></div>
-
-      <div class="unified-card fade-up">
-
-        <div class="uc-top">
-          <!-- <div class="cp-avatar">FS</div> -->  <!-- Avatar opcional, pode ser uma foto ou ícone -->
-           <div class="cp-avatar">
-                    <img src="assets/profile/profile.webp" alt="Foto de perfil">
-                    
-                 </div>
-
-          <div>
-            <div class="cp-name">Felipe Santos</div>
-            <div class="cp-role mono">Android Developer &amp; Software Developer</div>
-          </div>
-
-          <span class="pc-badge mono">● disponível</span>
-        </div>
-
-        <div class="uc-links">
-          <a href="https://wa.me/5541984084116" target="_blank" class="uc-link">
-            <span class="uc-link-icon"><i class="fab fa-whatsapp"></i></span>
-            <span class="uc-link-label mono">WhatsApp</span>
-           <!-- <span class="uc-link-val">41 98408-4116</span> -->
-          </a>
-
-          <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" class="uc-link">
-            <span class="uc-link-icon"><i class="fab fa-linkedin-in"></i></span>
-            <span class="uc-link-label mono">LinkedIn</span>
-            <!-- <span class="uc-link-val">oofelipesantos</span> -->
-          </a>
-
-          <a href="https://github.com/felipe-santos-tech" target="_blank" class="uc-link">
-            <span class="uc-link-icon"><i class="fab fa-github"></i></span>
-            <span class="uc-link-label mono">GitHub</span>
-            <!-- <span class="uc-link-val">@felipe-santos-tech</span> -->
-          </a>
-        </div>
-
-        <form id="cform" class="uc-body">
-
-          <input type="hidden" name="access_key" value="9fc1f0ed-f1ec-47ac-97fe-a08c6ad082c9">
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
-
-          <div class="form-2col">
-            <div class="form-group">
-              <input type="text" id="name" name="name" required placeholder=" ">
-              <label for="name">Nome completo</label>
-            </div>
-
-            <div class="form-group">
-              <input type="email" id="email" name="email" required placeholder=" ">
-              <label for="email">E-mail</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <select id="servico" name="servico" required>
-              <option value="" disabled selected></option>
-              <option value="Desenvolvimento Android">📱 Desenvolvimento Android</option>
-              <option value="Automação de Processos">⚙️ Automação de Processos</option>
-              <option value="SQL / Banco de Dados">🗄️ SQL / Banco de Dados</option>
-              <option value="Consultoria ERP">🏭 Consultoria ERP</option>
-              <option value="Outros">👀 Outros assuntos</option>
-            </select>
-            <label for="servico">Tipo de serviço</label>
-          </div>
-
-          <div class="form-group">
-            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
-            <label for="message">Sua mensagem</label>
-          </div>
-
-          <div class="captcha-box">
-            <div class="h-captcha" data-captcha="true"></div>
-            <small class="captcha-help">
-              Confirme que você não é um robô antes de enviar.
-            </small>
-          </div>
-
-        </form>
-
-        <div class="uc-footer">
-          <div class="uc-footer-note mono">
-            <span class="status-dot"></span> Resposta em menos de 24h
-          </div>
-
-          <button type="submit" form="cform" class="submit-btn" id="submitBtn">
-            Enviar mensagem <i class="fas fa-paper-plane"></i>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
-        <div class="footer-brand mono">FS_</div>
+        <div class="footer-brand">FS_</div>
         <div class="footer-links">
-          <a href="#home">início</a>
-          <a href="#sobre">sobre</a>
-          <a href="#stack">stack</a>
-          <a href="#projetos">projetos</a>
-          <a href="#contato">contato</a>
+          <a href="index.html">início</a>
+          <a href="projetos.html">projetos</a>
+          <a href="servicos.html">serviços</a>
+          <a href="contato.html">contato</a>
         </div>
         <div class="footer-socials">
           <a href="https://github.com/felipe-santos-tech" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/felipe-santos-tech/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://wa.me/5541984084116" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
         <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR · Todos os direitos reservados</p>
@@ -715,13 +222,7 @@
 
   </main>
 
-<!-- BACK TO TOP -->
-<button id="topBtn" class="top-btn" title="Voltar ao topo">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://web3forms.com/client/script.js" async defer></script>
-<script src="js/script.js"></script>
+  <button id="topBtn" class="top-btn" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+  <script src="js/script.js"></script>
 </body>
 </html>
